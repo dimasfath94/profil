@@ -542,8 +542,8 @@ ul {
 .featured-img-one {
   background-image: url(../images/home-bg-img.jpeg); }
 
-  .home-bg-image {
-    background-image: url(../images/home-bg-image.png); }
+ .home-bg-image {
+    background-color: #0ab69a }
 
 .featured-img-two {
   background-image: url(../images/extra-feature-bg.jpg); }
