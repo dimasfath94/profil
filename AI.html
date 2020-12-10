@@ -13,10 +13,14 @@
 	<link rel="stylesheet" media="all" href="assets/component/styles/reply.css">
 	<link rel="stylesheet" media="all" href="assets/component/styles/typing.css">
   <link rel="stylesheet" media="all" href="assets/component/styles/input.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+  <script src="assets/sweetalert2/dist/sweetalert2.min.js"></script>
+  <link rel="stylesheet" href="assets/sweetalert2/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   
-  <script src= 
-"https://smtpjs.com/v3/smtp.js"> 
-</script> 
+  <script src= "https://smtpjs.com/v3/smtp.js"> </script> 
 	<style>
 	body {
 		background: #dcdde0;
@@ -34,16 +38,16 @@
 
   <script>
     var greetings = [
-    "hello"
-  , "ciao"
-  , "welcome"
-  , "howdy"
-  , "greetings"
-  , "hi there!"
-  , "halo"
-  , "hola"
-  , "Good day"
-  , "hey"
+      "hello"
+    , "ciao"
+    , "welcome"
+    , "howdy"
+    , "greetings"
+    , "hi there!"
+    , "halo"
+    , "hola"
+    , "Good day"
+    , "hey"
 ];
 var greeting_id = Math.floor(Math.random() * greetings.length);
   </script>
@@ -128,15 +132,15 @@ var convo = {
 
 //bahasa Indo Pembuka
   "indo": {
-    says: ["halo! saya akan melayani anda. apa yang ingin anda ketahui?"],
+    says: ["hai!" , "saya akan melayani anda. apa yang ingin anda ketahui?"],
     reply: [
       {
         question: "tentang dimas",
         answer: "tentang"
       },
       {
-        question: "github",
-        answer: "git"
+        question: "sosial media",
+        answer: "sosmed"
       },
       {
         question: "beritahu Dimas",
@@ -144,22 +148,7 @@ var convo = {
       },
       {
         question: "waktu sekarang",
-        answer: ""
-      }
-    ]
-  },
-
-  //bahasa inggris pembuka
-  "eng": {
-    says: ["Hello! I will serve you. what do you want to know?"],
-    reply: [
-      {
-        question: "website",
-        answer: "webeng"
-      },
-      {
-        question: "github",
-        answer: "giteng"
+        answer: "waktu"
       }
     ]
   },
@@ -173,8 +162,8 @@ var convo = {
         answer: "tentang"
       },
       {
-        question: "github",
-        answer: "git"
+        question: "sosial media",
+        answer: "sosmed"
       },
       {
         question: "beritahu Dimas",
@@ -182,24 +171,30 @@ var convo = {
       },
       {
         question: "waktu sekarang",
-        answer: ""
+        answer: "waktu"
       }
     ]
   },
 
 
-
-
-  "git": {
-    says: ["www.github.com","itu adalah githubnya"],
+  "sosmed": {
+    says: ["<a href='https://www.instagram.com/dimasfath94' target='_blank'><i class='fa fa-instagram'> Instagram</i>","<a href='https://api.whatsapp.com/send?phone=6281218006463&source=&data=' target='_blank'><i class='fa fa-whatsapp'> Whatsapp</i>","<a href='https://id.linkedin.com/in/dimas-fathulyaqin-0859981b0?challengeId=AQFMPCJmf1fBtwAAAXYpiGQAPulkDnZsUZCpFsI2xpwL6IRdHmwhPiz7RJ1_7MxyePfAlYyVViXIducEyizRwtgbbf-9TTK35A&submissionId=07fc645c-3d43-4d16-3904-992436cfc55c' target='_blank'><i class='fa fa-linkedin'> Linkedin</i>","<a href='https://twitter.com/dimasfath94' target='_blank'><i class='fa fa-twitter'> Twitter</i>"],
     reply: [
-      {
-        question: "website",
-        answer: "web"
+    {
+        question: "tentang dimas",
+        answer: "tentang"
       },
       {
-        question: "github",
-        answer: "git"
+        question: "sosial media",
+        answer: "sosmed"
+      },
+      {
+        question: "beritahu Dimas",
+        answer: "beritahu"
+      },
+      {
+        question: "waktu sekarang",
+        answer: "waktu"
       }
     ]
   },
@@ -225,7 +220,7 @@ var convo = {
     reply: [
       {
         question: "boleh",
-        answer: "boleh"
+        answer: "kirimPesan"
       },
       {
         question: "gak",
@@ -247,67 +242,19 @@ var convo = {
 
 
   "waktu": { 
-    says: ["the time","is now"],
+    says: ["waktu sekarang : <div id='digital-clock'></div>" , "Selamat <div id='greet-time'></div", "mau tanya apa?"],
     reply: [
       {
-        question: "website",
-        answer: "web"
+        question: "tentang dimas",
+        answer: "tentang"
       },
       {
         question: "github",
         answer: "git"
-      }
-    ]
-  },
-
-  "time": { 
-    says: ["the time is now"],
-    reply: [
-      {
-        question: "website",
-        answer: "web"
-      }
-    ]
-  },
-
-  "webeng": {
-    says: ["www.github.com", "that's the website"],
-    reply: [
-      {
-        question: "website",
-        answer: "web"
       },
       {
-        question: "github",
-        answer: "git"
-      }
-    ]
-  },
-
-  "giteng": {
-    says: ["www.github.com","that's the github"],
-    reply: [
-      {
-        question: "website",
-        answer: "web"
-      },
-      {
-        question: "github",
-        answer: "git"
-      }
-    ]
-  },
-
-  "time": { 
-    says: ["www.github.com","itu adalah githubnya"],
-    reply: [
-      {
-        question: "website",
-        answer: "web"
-      },
-      {
-        question: "github",
-        answer: "git"
+        question: "beritahu Dimas",
+        answer: "beritahu"
       }
     ]
   },
@@ -318,6 +265,136 @@ var convo = {
       {
         question: "kembali ke awal",
         answer: "indo"
+      }
+    ]
+  },
+
+  // BAHASA INGGRIS \\
+
+  // BAHASA INGGRIS \\
+
+    //bahasa inggris pembuka
+    "eng": {
+    says: ["Hello! I will serve you. what do you want to know?"],
+    reply: [
+      {
+        question: "about dimas",
+        answer: "about"
+      },
+      {
+          question: "social media",
+          answer: "socmedeng"
+      },
+      {
+          question: "notify Dimas",
+          answer: "notify"
+      },
+      {
+          question: "date time now",
+          answer: "time"
+      }
+    ]
+  },
+
+  "time": { 
+    says: ["Time is now: <div id='digital-clock-eng'></div>" , "Good <div id='greet-time-eng'></div", "What do you want to ask?"],
+    reply: [
+    {
+        question: "about dimas",
+        answer: "about"
+      },
+      {
+          question: "social media",
+          answer: "socmedeng"
+      },
+      {
+          question: "notify Dimas",
+          answer: "notify"
+      }
+    ]
+  },
+
+
+
+
+  "about": {
+    says: ["dimas is someone who learns about the world of IT", "but he didn't just learn about IT", "he learned all kinds of things", "Anything else you want to ask?"],
+    reply: [
+      {
+        question: "about dimas",
+        answer: "about"
+      },
+      {
+          question: "social media",
+          answer: "socmedeng"
+      },
+      {
+          question: "notify Dimas",
+          answer: "notify"
+      },
+      {
+          question: "date time now",
+          answer: "time"
+      }
+    ]
+  },
+
+  "socmedeng": {
+    says: ["<a href='https://www.instagram.com/dimasfath94' target='_blank'><i class='fa fa-instagram'> Instagram</i>","<a href='https://api.whatsapp.com/send?phone=6281218006463&source=&data=' target='_blank'><i class='fa fa-whatsapp'> Whatsapp</i>","<a href='https://id.linkedin.com/in/dimas-fathulyaqin-0859981b0?challengeId=AQFMPCJmf1fBtwAAAXYpiGQAPulkDnZsUZCpFsI2xpwL6IRdHmwhPiz7RJ1_7MxyePfAlYyVViXIducEyizRwtgbbf-9TTK35A&submissionId=07fc645c-3d43-4d16-3904-992436cfc55c' target='_blank'><i class='fa fa-linkedin'> Linkedin</i>","<a href='https://twitter.com/dimasfath94' target='_blank'><i class='fa fa-twitter'> Twitter</i>"],
+    reply: [
+      {
+        question: "about dimas",
+        answer: "about"
+      },
+      {
+          question: "social media",
+          answer: "socmedeng"
+      },
+      {
+          question: "notify Dimas",
+          answer: "notify"
+      },
+      {
+          question: "date time now",
+          answer: "time"
+      }
+    ]
+  },
+
+  "notify": {
+    says: ["want to notify Dimas?"],
+    reply: [
+      {
+        question: "yes",
+        answer: "notify2"
+      },
+      {
+        question: "no",
+        answer: "eng"
+      }
+    ]
+  },
+
+  "notify2": {
+    says: ["want to write a message?"],
+    reply: [
+      {
+        question: "of course",
+        answer: "kirimPesaneng"
+      },
+      {
+        question: "no thanks, just say hi",
+        answer: "sendEmaileng"
+      }
+    ]
+  },
+
+  "prosesemaileng": { 
+    says: ["I have conveyed via email."],
+    reply: [
+      {
+        question: "back to start",
+        answer: "eng"
       }
     ]
   },
@@ -343,35 +420,253 @@ sendEmail = function() {
         Host: "smtp.gmail.com", 
         Username: "botdim94@gmail.com", 
         Password: "robotpunyagua", 
-        To: 'buatoak@gmail.com', 
+        To: 'dimasfathulyaqin@gmail.com', 
         From: "botdim94@gmail.com", 
         Subject: "Email From Botdim", 
-        Body: "chatWindow", 
+        Body: "Tuan Dimas Yang terhormat, ada yang mengunjungi website anda dan ada yang berinteraksi dengan saya tanpa mengirimkan pesan. Tetapi menitip salam kepada anda.", 
       }) 
         .then(function (message) { 
-          alert("mail sent successfully")
+          alert("email berhasil terkirim.")
           chatWindow.talk(convo, "prosesemail")  
         }); 
     } 
 
+    //function kirim pesan english
+    sendEmaileng = function() { 
+      Email.send({ 
+        SecureToken : "c2127c4d-aaca-4af1-bdb3-5ea42a33bf34",
+        Host: "smtp.gmail.com", 
+        Username: "botdim94@gmail.com", 
+        Password: "robotpunyagua", 
+        To: 'dimasfathulyaqin@gmail.com', 
+        From: "botdim94@gmail.com", 
+        Subject: "Email From Botdim", 
+        Body: "Dear Mr. Dimas, some have visited your website and some have interacted with me without sending messages. But send greetings to you.", 
+      }) 
+        .then(function (message) { 
+          alert("email sent successfully.")
+          chatWindow.talk(convo, "prosesemaileng")  
+        }); 
+    } 
+
+
 //waktu
-greeting = function() {
-var greetings = [
-    "hello"
-  , "ciao"
-  , "welcome"
-  , "howdy"
-  , "greetings"
-  , "hi there!"
-  , "halo"
-  , "hola"
-  , "Good day"
-  , "hey"
-];
-var greeting_id = Math.floor(Math.random() * greetings.length);
+getDateTime  = function() {
+    var now     = new Date(); 
+    var year    = now.getFullYear();
+    var month   = now.getMonth()+1; 
+    var day     = now.getDate();
+    var hour    = now.getHours();
+    var h = hour % 12;
+    var minute  = now.getMinutes();
+    var second  = now.getSeconds(); 
+
+    if(month.toString().length == 1) {
+         month = '0'+month;
+    }
+    if(day.toString().length == 1) {
+         day = '0'+day;
+    }   
+    if(hour.toString().length == 1) {
+         hour = '0'+hour;
+    }
+    if(minute.toString().length == 1) {
+         minute = '0'+minute;
+    }
+    if(second.toString().length == 1) {
+         second = '0'+second;
+    }   
+
+    
+    var dateTime = year+'/'+month+'/'+day+' '+ '<br>' + 'Jam = '+hour+':'+minute;   
+     return dateTime;
 }
 
+greetTime  = function() {
+  var myDate = new Date();
+    var hrs = myDate.getHours();
 
+    var greet;
+
+    if (hrs < 12)
+        greet = 'Pagi';
+    else if (hrs >= 12 && hrs <= 17)
+        greet = 'Sore';
+    else if (hrs >= 17 && hrs <= 24)
+        greet = 'Malam';
+
+        
+        document.getElementById('greet-time').innerHTML = greet + ' ^_^';
+
+}
+
+    // example usage: realtime clock
+    setInterval(function(){
+        currentTime = getDateTime();
+        document.getElementById("digital-clock").innerHTML = currentTime;
+    }, 1000);
+
+      // Greet By time
+      setInterval(function(){
+        greet_time = greetTime();
+        document.getElementById("greet-time").innerHTML = + greet_time(greet);
+    }, 1000);
+    //end waktu
+
+
+
+    //time
+getDateTimeEng  = function() {
+    var noweng     = new Date(); 
+    var yeareng   = noweng.getFullYear();
+    var montheng   = noweng.getMonth()+1; 
+    var dayeng     = noweng.getDate();
+    var houreng    = noweng.getHours();
+    var h = houreng % 12;
+    var minuteeng  = noweng.getMinutes();
+    var secondeng  = now.getSeconds(); 
+
+    if(montheng.toString().length == 1) {
+         montheng = '0'+montheng;
+    }
+    if(dayeng.toString().length == 1) {
+         dayeng = '0'+dayeng;
+    }   
+    if(houreng.toString().length == 1) {
+         houreng = '0'+houreng;
+    }
+    if(minuteeng.toString().length == 1) {
+         minuteeng = '0'+minuteeng;
+    }
+    if(secondeng.toString().length == 1) {
+         secondeng = '0'+secondeng;
+    }   
+
+    
+    var dateTimeeng = yeareng+'/'+montheng+'/'+dayeng+' '+ '<br>' + 'Time is Now = '+houreng+':'+minuteeng;   
+     return dateTimeeng;
+}
+
+greetTimeeng  = function() {
+  var myDateeng = new Date();
+    var hrseng = myDateeng.getHours();
+
+    var greeteng;
+
+    if (hrseng < 12)
+        greeteng = 'Morning';
+    else if (hrseng >= 12 && hrseng <= 17)
+        greeteng = 'Afternoon';
+    else if (hrseng >= 17 && hrseng <= 24)
+        greeteng = 'Evening';
+
+        
+        document.getElementById('greet-time-eng').innerHTML = greeteng + ' ^_^';
+
+}
+
+    // example usage: realtime clock
+    setInterval(function(){
+        currentTimeeng = getDateTime();
+        document.getElementById("digital-clock-eng").innerHTML = currentTimeeng;
+    }, 1000);
+
+      // Greet By time
+      setInterval(function(){
+        greet_time_eng = greetTimeeng();
+        document.getElementById("greet-time-eng").innerHTML = + greet_time_eng(greeteng);
+    }, 1000);
+    //end time
+
+
+ 
+
+    // kirim pesan manual indo
+    kirimPesan = function(){
+      Swal.fire({
+        title: 'Kirim Pesan',
+        html: `<form action="javascript:customEmail();" name="pmForm" id="pmForm" method="post" class="form-group ml-5">  <textarea name="message" autocomplete="off" id="message" class="message" placeholder="Message"></textarea></form><br>`,
+        confirmButtonText: "Kirim",
+        focusConfirm: false,
+        showCancelButton: true,
+
+        preConfirm: () => {
+        const message = Swal.getPopup().querySelector('#message').value
+
+        if (!message) 
+        {
+          Swal.showValidationMessage(`masukan pesan terlebih dahulu`)
+        }
+        else if (message)
+        {
+                Email.send({
+                    Host : "smtp.gmail.com",
+                    Username : "botdim94@gmail.com",
+                    Password : "robotpunyagua",
+                    To : 'dimasfathulyaqin@gmail.com',
+                    From : "botdim94@gmail.com",
+                    Subject : "Email From Botdim",
+                    Body : $('#message').val()
+                }).then(
+                  message => alert("email berhasil terkirim."),
+                  chatWindow.talk(convo, "prosesemail") 
+                );
+
+        }
+    return { message : message }
+  }    
+      }).then((result) => { 
+        Swal.fire(
+          'Berhasil!',
+          'Pesan Berhasil di Proses',
+          'success')
+      }) 
+    }
+    //end kirim pesan manual
+
+
+    // kirim pesan manual english
+    kirimPesaneng = function(){
+      Swal.fire({
+        title: 'Send Message',
+        html: `<form action="javascript:customEmaileng();" name="pmForm" id="pmForm" method="post" class="form-group ml-5">  <textarea name="message" autocomplete="off" id="messageeng" class="messageeng" placeholder="Message"></textarea></form><br>`,
+        confirmButtonText: "Send",
+        focusConfirm: false,
+        showCancelButton: true,
+
+        preConfirm: () => {
+        const messageeng = Swal.getPopup().querySelector('#messageeng').value
+
+        if (!messageeng) 
+        {
+          Swal.showValidationMessage(`enter the message first`)
+        }
+        else if (messageeng)
+        {
+                Email.send({
+                    Host : "smtp.gmail.com",
+                    Username : "botdim94@gmail.com",
+                    Password : "robotpunyagua",
+                    To : 'dimasfathulyaqin@gmail.com',
+                    From : "botdim94@gmail.com",
+                    Subject : "Email From Botdim",
+                    Body : $('#messageeng').val()
+                }).then(
+                  message => alert("email sent successfully."),
+                  chatWindow.talk(convo, "prosesemaileng") 
+                );
+
+        }
+    return { messageeng : messageeng }
+  }    
+      }).then((result) => { 
+        Swal.fire(
+          'Done!',
+          'Message Successfully Processed',
+          'success')
+      }) 
+    }
+    //end kirim pesan manual english
 
 
 
@@ -379,6 +674,9 @@ var greeting_id = Math.floor(Math.random() * greetings.length);
 
 chatWindow.talk(convo)
 </script>
+
+
+<script src="assets/js/jquery.min.js"></script>
 
 <script src= 
 "https://smtpjs.com/v3/smtp.js"> 
