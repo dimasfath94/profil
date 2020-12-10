@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Keyboard Input for chat-bubble</title>
+
+	<!-- for mobile screens -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- stylesheets are conveniently separated into components -->
+	<link rel="stylesheet" media="all" href="assets/component/styles/setup.css">
+	<link rel="stylesheet" media="all" href="assets/component/styles/says.css">
+	<link rel="stylesheet" media="all" href="assets/component/styles/reply.css">
+	<link rel="stylesheet" media="all" href="assets/component/styles/typing.css">
+  <link rel="stylesheet" media="all" href="assets/component/styles/input.css">
+  
+  <script src= 
+"https://smtpjs.com/v3/smtp.js"> 
+</script> 
+	<style>
+	body {
+		background: #dcdde0;
+	}
+	.bubble-container {
+		height: 100vh;
+	}
+	.bubble-container .input-wrap textarea {
+		margin: 0;
+		width: calc(100% - 30px);
+	}
+	</style>
+</head>
+<body>
+
+  <script>
+    var greetings = [
+    "hello"
+  , "ciao"
+  , "welcome"
+  , "howdy"
+  , "greetings"
+  , "hi there!"
+  , "halo"
+  , "hola"
+  , "Good day"
+  , "hey"
+];
+var greeting_id = Math.floor(Math.random() * greetings.length);
+  </script>
+
+
+<div id="chat" class="chat"></div>
+
+
+
+
+
+<script>
+  
+var today = new Date();
+
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+
+</script>
+
+<script src="assets/component/Bubbles.js"></script>
+<script>
+
+
+
+var chatWindow = new Bubbles(document.getElementById("chat"), "chatWindow", {
+
+
+
+  inputCallbackFn: function(o) {
+
+    var miss = function() {
+      chatWindow.talk(
+        {
+          "i-dont-get-it": {
+            says: [
+              "Sorry i don't understand, looks like Dimas didn't train me on that",
+              "Maaf saya tidak mengerti, sepertinya Dimas belum mengajarkan saya"
+            ],
+            reply: o.convo[o.standingAnswer].reply
+          }
+        },
+        "i-dont-get-it"
+      )
+    }
+
+
+    var match = function(key) {
+      setTimeout(function() {
+        chatWindow.talk(convo, key) 
+      }, 600)
+    }
+
+    
+    var strip = function(text) {
+      return text.toLowerCase().replace(/[\s.,\/#!$%\^&\*;:{}=\-_'"`~()]/g, "")
+    }
+
+
+    var found = false
+    o.convo[o.standingAnswer].reply.forEach(function(e, i) {
+      strip(e.question).includes(strip(o.input)) && o.input.length > 0
+        ? (found = e.answer)
+        : found ? null : (found = false)
+    })
+    found ? match(found) : miss()
+  }
+}) 
+var convo = {
+  pembuka: {
+    says: ["Choose Language", "Pilih Bahasa"],
+    reply: [
+      {
+        question: "Bahasa Indonesia",
+        answer: "indo"
+      },
+      {
+        question: "English",
+        answer: "eng"
+      }
+    ]
+  },
+
+//bahasa Indo Pembuka
+  "indo": {
+    says: ["halo! saya akan melayani anda. apa yang ingin anda ketahui?"],
+    reply: [
+      {
+        question: "tentang dimas",
+        answer: "tentang"
+      },
+      {
+        question: "github",
+        answer: "git"
+      },
+      {
+        question: "beritahu Dimas",
+        answer: "beritahu"
+      },
+      {
+        question: "waktu sekarang",
+        answer: ""
+      }
+    ]
+  },
+
+  //bahasa inggris pembuka
+  "eng": {
+    says: ["Hello! I will serve you. what do you want to know?"],
+    reply: [
+      {
+        question: "website",
+        answer: "webeng"
+      },
+      {
+        question: "github",
+        answer: "giteng"
+      }
+    ]
+  },
+
+  //tentang bahasa indo
+  "tentang": {
+    says: ["dimas adalah seseorang yang belajar tentang dunia IT", "tapi dia tidak hanya belajar tentang IT saja", "dia belajar berbagai macam hal", "ada lagi yang ingin di tanyakan?"],
+    reply: [
+      {
+        question: "tentang dimas",
+        answer: "tentang"
+      },
+      {
+        question: "github",
+        answer: "git"
+      },
+      {
+        question: "beritahu Dimas",
+        answer: "beritahu"
+      },
+      {
+        question: "waktu sekarang",
+        answer: ""
+      }
+    ]
+  },
+
+
+
+
+  "git": {
+    says: ["www.github.com","itu adalah githubnya"],
+    reply: [
+      {
+        question: "website",
+        answer: "web"
+      },
+      {
+        question: "github",
+        answer: "git"
+      }
+    ]
+  },
+
+  //notifikasi email bahasa indo
+  "beritahu": {
+    says: ["mau diberitahu ke Dimas?"],
+    reply: [
+      {
+        question: "ya",
+        answer: "emaillanjut"
+      },
+      {
+        question: "tidak",
+        answer: "indo"
+      }
+    ]
+  },
+
+  //email lanjut bahasa indo
+  "emaillanjut": {
+    says: ["mau tulis pesan?"],
+    reply: [
+      {
+        question: "boleh",
+        answer: "boleh"
+      },
+      {
+        question: "gak",
+        answer: "sendEmail"
+      }
+    ]
+  },
+
+  "boleh": {
+    says: ["tulis pesan dibawah lalu klik kirim"],
+    reply: [
+      {
+        question: "kirim",
+        answer: "sendEmail"
+      }
+    ]
+  },
+
+
+
+  "waktu": { 
+    says: ["the time","is now"],
+    reply: [
+      {
+        question: "website",
+        answer: "web"
+      },
+      {
+        question: "github",
+        answer: "git"
+      }
+    ]
+  },
+
+  "time": { 
+    says: ["the time is now"],
+    reply: [
+      {
+        question: "website",
+        answer: "web"
+      }
+    ]
+  },
+
+  "webeng": {
+    says: ["www.github.com", "that's the website"],
+    reply: [
+      {
+        question: "website",
+        answer: "web"
+      },
+      {
+        question: "github",
+        answer: "git"
+      }
+    ]
+  },
+
+  "giteng": {
+    says: ["www.github.com","that's the github"],
+    reply: [
+      {
+        question: "website",
+        answer: "web"
+      },
+      {
+        question: "github",
+        answer: "git"
+      }
+    ]
+  },
+
+  "time": { 
+    says: ["www.github.com","itu adalah githubnya"],
+    reply: [
+      {
+        question: "website",
+        answer: "web"
+      },
+      {
+        question: "github",
+        answer: "git"
+      }
+    ]
+  },
+
+  "prosesemail": { 
+    says: ["sudah saya sampaikan melalui email."],
+    reply: [
+      {
+        question: "kembali ke awal",
+        answer: "indo"
+      }
+    ]
+  },
+
+  "tidak": {
+    says: [
+      "Terima kasih telah menggunakan fitur kami :)",
+      "<img src=assets/images/thankyou.gif />"
+    ],
+    reply: [
+      {
+        question: "Start Over",
+        answer: "pembuka"
+      }
+    ]
+  }
+}
+
+//function kirim pesan
+sendEmail = function() { 
+      Email.send({ 
+        SecureToken : "c2127c4d-aaca-4af1-bdb3-5ea42a33bf34",
+        Host: "smtp.gmail.com", 
+        Username: "botdim94@gmail.com", 
+        Password: "robotpunyagua", 
+        To: 'buatoak@gmail.com', 
+        From: "botdim94@gmail.com", 
+        Subject: "Email From Botdim", 
+        Body: "chatWindow", 
+      }) 
+        .then(function (message) { 
+          alert("mail sent successfully")
+          chatWindow.talk(convo, "prosesemail")  
+        }); 
+    } 
+
+//waktu
+greeting = function() {
+var greetings = [
+    "hello"
+  , "ciao"
+  , "welcome"
+  , "howdy"
+  , "greetings"
+  , "hi there!"
+  , "halo"
+  , "hola"
+  , "Good day"
+  , "hey"
+];
+var greeting_id = Math.floor(Math.random() * greetings.length);
+}
+
+
+
+
+
+
+
+chatWindow.talk(convo)
+</script>
+
+<script src= 
+"https://smtpjs.com/v3/smtp.js"> 
+</script> 
+</body>
