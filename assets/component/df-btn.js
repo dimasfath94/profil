@@ -106,7 +106,7 @@ else {
         opacity: 0
     }
 
-    @media screen and (max-width: 720px){
+    @media screen and (max-width: 220px){
         .df-btn {
             border-radius: 28px;
         }
