@@ -70,6 +70,26 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+   .main_bt
+{
+     background: transparent;
+    color: #fff;
+    padding: 15px 60px 15px 60px;
+
+    font-size: 15px;
+    font-weight: 400;
+    border: solid #fff 2px;
+    border-radius: 30px;
+    margin: 63px 0px 60px 0px;
+}
+
+ .main_bt:hover, .main_bt:focus 
+ {
+     background: #0072bc;
+    border: solid #000 2px;
+    color: #fff;
+  }
   
   /* 100% Image Width on Smaller Screens */
   @media only screen and (max-width: 700px){
