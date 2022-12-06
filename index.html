@@ -1,10 +1,13 @@
-<html lang="en"><head>
+<!doctype html>
+<html lang="en">
+    
+<head>
         <title>Profile - Dimas Fathulyaqin </title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="My Biodata">
-        <meta name="keywords" content="creative, cv, designer,  online cv, online resume, powerful portfolio, professional, professional resume, responsive, resume, vcard ">
+        <meta name="description" content="My Biodata" />
+        <meta name="keywords" content="creative, cv, designer,  online cv, online resume, powerful portfolio, professional, professional resume, responsive, resume, vcard " />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
                 
         <!-- FAV AND ICONS   -->
@@ -41,138 +44,20 @@
         <link rel="alternate stylesheet" href="assets/css/colors/yellow.css" title="yellow">
 
         
-    <style>
-    .df-btn {
-        padding: 0;
-        border: none;
-        box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302),0 1px 3px 1px rgba(60,64,67,0.149);
-        font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        background-color: #0072B5;
-        border-radius: 24px;
-        cursor: pointer;
-        transition: all .08s linear;
-        position: fixed;
-        bottom: 0px;
-        right: 0px;
-        margin: 16px;
-        display: flex;
-        flex-direction: column;
-        z-index: 999
-    }
-
-    .df-btn-text {
-        min-width: 56px;
-        color: #3c4043;
-        display: inline-flex;
-        align-items: center;
-        font-weight: 500;
-        letter-spacing: .25px;
-        transition: all .08s linear;
-        padding: 0 24px 0 0;
-        font-size: .875rem;
-        height: 48px
-    }
-
-    .df-btn-text:before {
-        min-width: 56px;
-        height: 48px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 24px;
-        background-image: url('assets/logo.svg');
-        content: ''
-    }
-
-    .df-btn:hover {
-        box-shadow: 0 1px 3px 0 rgba(60,64,67,0.302), 0 4px 8px 3px rgba(60,64,67,0.149)
-    }
-
-    .df-btn:not(.df-closed){
-        border-radius: 16px
-    }
-
-    .df-btn:not(.df-closed) > .df-btn-text:before {
-        background-image: url('assets/close.svg')
-    }
-
-    .df-btn-content {
-        display: block;
-        border: 0;
-        height: 400px;
-        width: 320px;
-        transition: all .25s ease;
-        float: right;
-        opacity: 1
-    }
-
-    .df-btn:not(.df-closed) > .df-btn-content {
-        padding-bottom: 16px;
-    }
-
-    .df-closed > .df-btn-content {
-        width: 0;
-        height: 0;
-        opacity: 0
-    }
-
-    @media screen and (max-width: 220px){
-        .df-btn {
-            border-radius: 28px;
-        }
-
-        .df-btn:not(.df-closed) {
-            margin: 0px;
-            border-radius: 0px
-        }
-
-        .df-btn:not(.df-closed) > .df-btn-content {
-            width: 100vw;
-            height: calc(100vh - 56px);
-            padding-bottom: 0px
-        }
-
-        .df-btn-text {
-            padding: 0;
-            height: 56px;
-            font-size: 0;
-        }
-    }
-
-    @media (prefers-color-scheme: dark){
-        .df-btn {
-            background-color: #202124
-        }
-
-        .df-btn-text {
-            color: white
-        }
-
-        .df-btn-text:before {
-            background-image: url('assets/logo_dark.svg')
-        }
-
-        .df-btn:not(.df-closed) > .df-btn-text:before {
-            background-image: url('assets/close_dark.svg')
-        }
-    }</style><script type="text/javascript" charset="UTF-8" src="http://maps.googleapis.com/maps-api-v3/api/js/51/2/common.js"></script><script type="text/javascript" charset="UTF-8" src="http://maps.googleapis.com/maps-api-v3/api/js/51/2/util.js"></script></head>
+    </head>
     <body class="dark-vertion black-bg">
 
 
           <!-- buat chatbot -->         
-          <div style="float: left;"> 
+          <div style='float: left;'> 
            <!-- <script src="assets/component/df-btn.js" id="df-btn" project="dialogflow-web-v2" width="320px" height="400px" openText="Chat" closeText="Close" logo="assets/logo.svg" logoDark="assets/logo_dark.svg"> -->
-            <script src="assets/component/df-btn.js" id="df-btn" project="dialogflow-web-v2" width="320px" height="400px" closetext="Close" logo="assets/logo.svg" logodark="assets/logo_dark.svg"> 
-	        </script>
-        <button class="df-btn df-closed" onclick="dfToggle()">
-            <div class="df-btn-text"></div>
-            <iframe class="df-btn-content" src="AI.html"></iframe>
-        </button>
-                 
+            <script src="assets/component/df-btn.js" id="df-btn" project="dialogflow-web-v2" width="320px" height="400px" closeText="Close" logo="assets/logo.svg" logoDark="assets/logo_dark.svg"> 
+	        </script>             
         </div>         
         <!-- end chatbot -->  
         
         <!-- Start Loader -->
-        <div class="section-loader" style="display: none;">
+        <div class="section-loader">
             <div class="loader">
                 <div></div>
                 <div></div> 
@@ -185,7 +70,7 @@
            NAVIGATION
         ===================
         -->
-        <header class="black-bg mh-header mh-fixed-nav nav-scroll mh-xs-mobile-nav nav-strict" id="mh-header">
+        <header class="black-bg mh-header mh-fixed-nav nav-scroll mh-xs-mobile-nav" id="mh-header">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
@@ -196,7 +81,7 @@
                     
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto ml-auto">
-                                <li class="nav-item">
+                                <li class="nav-item active">
                                     <a class="nav-link" href="#mh-home">Home</a>
                                 </li>
                                 <li class="nav-item">
@@ -205,7 +90,7 @@
                                 <li class="nav-item">
                                    <a class="nav-link" href="#mh-skills">Skills</a>
                                 </li>                                
-                                <li class="nav-item active">
+                                <li class="nav-item">
                                    <a class="nav-link" href="#mh-experience">Experiences</a>
                                 </li>                                
                                 <li class="nav-item">
@@ -221,7 +106,7 @@
                                 --> 
                                 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="http://localhost/dynamicprofile/">Blog</a>
+                                    <a class="nav-link" href="https://dimasfathblog.xyz/">Blog</a>
                                 </li>
                               
                                 <li class="nav-item">
@@ -245,37 +130,37 @@
                     <div class="row section-separator xs-column-reverse vertical-middle-content home-padding">
                         <div class="col-sm-6">
                             <div class="mh-header-info">
-                                <div class="mh-promo wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.1s; animation-name: fadeInUp;">
+                                <div class="mh-promo wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
                                     <span>Hello I'm</span>
                                 </div>
                                 
-                                <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.2s; animation-name: fadeInUp;">Dimas Fathulyaqin</h2>
-                                <h4 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.3s; animation-name: fadeInUp;">Programmer</h4>
+                                <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Dimas Fathulyaqin</h2>
+                                <h4 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">Programmer / Developer</h4>
                                 
                                 <ul>
-                                    <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.4s; animation-name: fadeInUp;"><i class="fa fa-envelope"></i><a href="mailto:">dimasfathulyaqin@gmail.com</a></li>
-                                    <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s; animation-name: fadeInUp;"><i class="fa fa-phone"></i><a href="tel:/">+62 812 1800 6463</a></li>
-                                    <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.6s; animation-name: fadeInUp;"><i class="fa fa-map-marker"></i><address>JL. H. Amsar No.38 Bintaro Jakarta Selatan</address></li>
+                                    <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"><i class="fa fa-envelope"></i><a href="mailto:">dimasfathulyaqin@gmail.com</a></li>
+                                    <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s"><i class="fa fa-phone"></i><a href="tel:/">+62 812 1800 6463</a></li>
+                                    <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s"><i class="fa fa-map-marker"></i><address>JL. H. Amsar No.38 Bintaro Jakarta Selatan</address></li>
                                 </ul>
                                 
-                                <ul class="social-icon wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.7s; animation-name: fadeInUp;">
-                                    <li><a href="https://id.linkedin.com/in/dimas-fathulyaqin-0859981b0?challengeId=AQFMPCJmf1fBtwAAAXYpiGQAPulkDnZsUZCpFsI2xpwL6IRdHmwhPiz7RJ1_7MxyePfAlYyVViXIducEyizRwtgbbf-9TTK35A&amp;submissionId=07fc645c-3d43-4d16-3904-992436cfc55c" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                <ul class="social-icon wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
+                                    <li><a href="https://id.linkedin.com/in/dimas-fathulyaqin-0859981b0?challengeId=AQFMPCJmf1fBtwAAAXYpiGQAPulkDnZsUZCpFsI2xpwL6IRdHmwhPiz7RJ1_7MxyePfAlYyVViXIducEyizRwtgbbf-9TTK35A&submissionId=07fc645c-3d43-4d16-3904-992436cfc55c" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                                     <li><a href="https://twitter.com/dimasfath94" target="_blank"><i class="fa fa-twitter"></i></a></li>
                                     <li><a href="https://github.com/dimasfath94" target="_blank"><i class="fa fa-github"></i></a></li>
                                     <li><a href="https://www.instagram.com/dimasfath94/" target="_blank"><i class="fa fa-instagram"></i></a></li>
                                 </ul>
                               <br>
 
-                                <ul class="social-icon wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.7s; animation-name: fadeInUp;">
+                                <ul class="social-icon wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
                                 <a href="https://drive.google.com/file/d/1O6axi2Fy-oXbeWdOxRQSIGwRxSRLY7NT/view?usp=sharing" target="_blank"> <input class="btn btn-primary" type="button" value="Download CV"> </a>
                              </ul>
 
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="hero-img wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.6s; animation-name: fadeInUp;">
+                            <div class="hero-img wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
                                 <div class="img-border">
-                                   <a href="index.php"> <img src=".././admin/upload/62ea1751b1d3f8.37277995.jpg" alt="" class="img-fluid" height="620px" width="620px"></a>
+                                   <a href="index.html"> <img src="assets/images/dimasfath.jpg" alt=""  class="img-fluid" height="620px" width="620px"></a>
                                 </div>
                             </div>
                         </div>
@@ -293,23 +178,17 @@
             <div class="container">
                 <div class="row section-separator">
                     <div class="col-sm-12 col-md-6">
-                        <div class="mh-about-img shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.4s; animation-name: fadeInUp;">
-                                                       <!-- <img src="assets/images/aboutme.jpg" alt="" class="img-fluid"> -->
-                            <img src="http://localhost/dynamicprofile/profil/assets/images/1a7b8f2c5f1d71e3dd5cd604f08d7de1-aboutme.jpg" alt="" class="img-fluid">
-                                                    </div>
+                        <div class="mh-about-img shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
+                            <img src="assets/images/aboutme.jpg" alt="" class="img-fluid">
+                        </div>
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <div class="mh-about-inner">
-                            <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.1s; animation-name: fadeInUp;">About Me</h2>
-                                                        <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.2s; animation-name: fadeInUp;">Hello, my name is Dimas, developer based on Jakarta. With a passion for Web Programming, Mobile Development, Software Development, and all things about Information Technology, I have both the skill set and background necessary to dive deep into the Information Technology world. As an upbeat, self-motivated team player with excellent communication, I envision an exciting future in the IT industry. Also I am good at</p>
-                        <!--                            <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Hello, my name is Dimas, developer based on Jakarta. 
+                            <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">About Me</h2>
+                            <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Hello, my name is Dimas, developer based on Jakarta. 
                               With a passion for Web Programming, Mobile Development, Software Development, and all things about Information Technology, I have both the skill set and  background necessary to dive deep into the Information Technology world. As an upbeat, self-motivated team player with excellent communication, I envision an exciting future in the IT industry. Also I am good at</p>
--->
-                              
-                            <div class="mh-about-tag wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                            <div class="mh-about-tag wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
                                 <ul>
-                                                                    <li><span>PHP</span></li>
-                            <!--
                                     <li><span>php</span></li>
                                     <li><span>html</span></li>
                                     <li><span>css</span></li>
@@ -317,83 +196,10 @@
                                     <li><span>c++/c#</span></li>
                                     <li><span>Vb.net</span></li>
                                     <li><span>Javascript</span></li>
-                              -->
-                                                                  <li><span>Java</span></li>
-                            <!--
-                                    <li><span>php</span></li>
-                                    <li><span>html</span></li>
-                                    <li><span>css</span></li>
-                                    <li><span>java</span></li>
-                                    <li><span>c++/c#</span></li>
-                                    <li><span>Vb.net</span></li>
-                                    <li><span>Javascript</span></li>
-                              -->
-                                                                  <li><span>Python</span></li>
-                            <!--
-                                    <li><span>php</span></li>
-                                    <li><span>html</span></li>
-                                    <li><span>css</span></li>
-                                    <li><span>java</span></li>
-                                    <li><span>c++/c#</span></li>
-                                    <li><span>Vb.net</span></li>
-                                    <li><span>Javascript</span></li>
-                              -->
-                                                                  <li><span>Vb.NET</span></li>
-                            <!--
-                                    <li><span>php</span></li>
-                                    <li><span>html</span></li>
-                                    <li><span>css</span></li>
-                                    <li><span>java</span></li>
-                                    <li><span>c++/c#</span></li>
-                                    <li><span>Vb.net</span></li>
-                                    <li><span>Javascript</span></li>
-                              -->
-                                                                  <li><span>c#</span></li>
-                            <!--
-                                    <li><span>php</span></li>
-                                    <li><span>html</span></li>
-                                    <li><span>css</span></li>
-                                    <li><span>java</span></li>
-                                    <li><span>c++/c#</span></li>
-                                    <li><span>Vb.net</span></li>
-                                    <li><span>Javascript</span></li>
-                              -->
-                                                                  <li><span>c++</span></li>
-                            <!--
-                                    <li><span>php</span></li>
-                                    <li><span>html</span></li>
-                                    <li><span>css</span></li>
-                                    <li><span>java</span></li>
-                                    <li><span>c++/c#</span></li>
-                                    <li><span>Vb.net</span></li>
-                                    <li><span>Javascript</span></li>
-                              -->
-                                                                  <li><span>Javascript</span></li>
-                            <!--
-                                    <li><span>php</span></li>
-                                    <li><span>html</span></li>
-                                    <li><span>css</span></li>
-                                    <li><span>java</span></li>
-                                    <li><span>c++/c#</span></li>
-                                    <li><span>Vb.net</span></li>
-                                    <li><span>Javascript</span></li>
-                              -->
-                                                                  <li><span>CSS</span></li>
-                            <!--
-                                    <li><span>php</span></li>
-                                    <li><span>html</span></li>
-                                    <li><span>css</span></li>
-                                    <li><span>java</span></li>
-                                    <li><span>c++/c#</span></li>
-                                    <li><span>Vb.net</span></li>
-                                    <li><span>Javascript</span></li>
-                              -->
-                                                              </ul>
+                                </ul>
                             </div>
-
-
-                            <a href="https://drive.google.com/file/d/1O6axi2Fy-oXbeWdOxRQSIGwRxSRLY7NT/view?usp=sharing" target="_blank" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.4s; animation-name: fadeInUp;">Download CV <i class="fa fa-download"></i></a>
-                            <a href="https://drive.google.com/file/d/1uYzMxAoXraqH_gvdBykJU_J1Q6wiHzCw/view?usp=sharing" target="_blank" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.4s; animation-name: fadeInUp;">Download Portfolio <i class="fa fa-download"></i></a>
+                            <a href="https://drive.google.com/file/d/1O6axi2Fy-oXbeWdOxRQSIGwRxSRLY7NT/view?usp=sharing" target="_blank" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">Download CV <i class="fa fa-download"></i></a>
+                            <a href="https://drive.google.com/file/d/1uYzMxAoXraqH_gvdBykJU_J1Q6wiHzCw/view?usp=sharing" target="_blank" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">Download Portfolio <i class="fa fa-download"></i></a>
                         </div>
                     </div>
                 </div>
@@ -408,51 +214,37 @@
         <section class="mh-service">
             <div class="container">
                 <div class="row section-separator">
-                    <div class="col-sm-12 text-center section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.2s; animation-name: fadeInUp;">
+                    <div class="col-sm-12 text-center section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
                         <h2>What I do</h2>
                     </div>
-
-                    
-                                        <div class="col-sm-4">
-                    
-                        <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.3s; animation-name: fadeInUp;">
-                     
-                        
+                    <div class="col-sm-4">
+                        <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
                             <i class="fa fa-bullseye purple-color"></i>
                             <h3>UI Design</h3>
                             <p>
-                                Development like an interface for web or apps that can be used for user friendly to build flowchart or mockup.                            </p>
-                            
+                                Development like an interface for web or apps that can be used for user friendly to build flowchart or mockup.
+                            </p>
                         </div>
-                       <br>
                     </div>
-                                        <div class="col-sm-4">
-                    
-                        <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.3s; animation-name: fadeInUp;">
-                     
-                        
+                    <div class="col-sm-4">
+                        <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
                             <i class="fa fa-code iron-color"></i>
                             <h3>Web Development</h3>
                             <p>
-                                I study front end and back end for website development, such as php, html, css, javascript, asp.net and many more.                            </p>
-                            
+                                I study front end and back end for website development, such as php, html, css, javascript, asp.net and many more.
+                            </p>
                         </div>
-                       <br>
                     </div>
-                                        <div class="col-sm-4">
-                    
-                        <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.3s; animation-name: fadeInUp;">
-                     
-                        
+                    <div class="col-sm-4">
+                        <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
                             <i class="fa fa-cog sky-color"></i>
                             <h3>App Development</h3>
                             <p>
-                                App development including, software development, mobile development like java c#, c++, python and many more.                            </p>
-                            
+                                app development including, software development, mobile development like java c#, c++, python and many more.
+                            </p>
                         </div>
-                       <br>
                     </div>
-                                    </div>
+                </div>
             </div>
         </section>
         
@@ -469,16 +261,42 @@
                             <h3>Featured Projects</h3>
                         </div>
                         <div class="col-sm-12">
-                            <div class="mh-single-project-slide-by-side row owl-carousel owl-theme owl-responsive-1170 owl-loaded">
+                            <div class="mh-single-project-slide-by-side row">
                                 <!-- Project Items -->
-
-                                
-                                
-
-                                
-                                
-
-                                                                <!-- Project Items 
+                                <div class="col-sm-12 mh-featured-item">
+                                    <div class="row">
+                                        <div class="col-sm-7">
+                                            <div class="mh-featured-project-img shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                                                <img src="assets/images/dpro_jakarta.jpg" alt="" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="mh-featured-project-content">
+                                                <h4 class="project-category wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">Web Design</h4>
+                                                <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">Dpro Jakarta</h2>
+                                                <span class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">Design & Development</span>
+                                                <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">Stamp is a clean and elegant Multipurpose Landing Page Template. 
+                                                It will fit perfectly for Startup, Web App or any type of Web Services.</p>
+                                                <a href="https://www.dprojakarta.com/" target="_blank" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s" target="_blank">View Details</a>
+                                                <div class="mh-testimonial mh-project-testimonial wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.9s">
+                                                    <blockquote>
+                                    					<q>Technology Quotes - You affect the world by what you browse.</q>
+                                    					<cite>- Tim Berners-Lee</cite>
+                                    				</blockquote>
+                                    				<blockquote>
+                                    					<q>Trovalds Quotes - Intelligence is the ability to avoid doing work, yet getting the work done.</q>
+                                    					<cite>- Linus Trovalds</cite>
+                                    				</blockquote>
+                                    				<blockquote>
+                                    					<q>Elon Quotes - If something’s important enough, you should try. Even if you the probable outcome is failure.</q>
+                                    					<cite>- Elon Musk</cite>
+                                    				</blockquote>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Project Items -->
                                 <div class="col-sm-12 mh-featured-item">
                                     <div class="row">
                                         <div class="col-sm-7">
@@ -511,116 +329,15 @@
                                         </div>
                                     </div>
                                 </div>
-                    -->
                                 
-                                        <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2220px;"><div class="owl-item active" style="width: 1110px; margin-right: 0px;"><div class="col-sm-12 mh-featured-item">
-                                    <div class="row">
-                                        <div class="col-sm-7">
-                                            <div class="mh-featured-project-img shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.2s; animation-name: fadeInUp;">
-                                                <img src="http://localhost/dynamicprofile/profil/assets/images/210725300bcc4b4b753cf89b139ae797-dpro_jakarta.jpg" alt="" class="img-fluid">
-                                                
-                                            </div>
                                         </div>
-                                        <div class="col-sm-5">
-                                            <div class="mh-featured-project-content">
-
-                                           
-
-                                                <h4 class="project-category wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.4s; animation-name: fadeInUp;">Web Design</h4>
-                                                <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s; animation-name: fadeInUp;">Dpro Jakarta</h2>
-                                                <span class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.6s; animation-name: fadeInUp;">Design &amp; Development</span>
-                                                <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.7s; animation-name: fadeInUp;">Stamp is a clean and elegant Multipurpose Landing Page Template. It will fit perfectly for Startup, Web App or any type of Web Services.</p>
-                                                <a href="https://www.dprojakarta.com/" target="_blank" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.7s; animation-name: fadeInUp;">View Details</a>
-                                                <div class="mh-testimonial mh-project-testimonial wow fadeInUp owl-carousel owl-theme owl-responsive-1170 owl-loaded" data-wow-duration="0.8s" data-wow-delay="0.9s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.9s; animation-name: fadeInUp;">
-                                                    
-                                    				
-                                    				
-                                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-433px, 0px, 0px); transition: all 0s ease 0s; width: 3031px;"><div class="owl-item cloned" style="width: 433px; margin-right: 0px;"><blockquote>
-                                    					<q>Trovalds Quotes - Intelligence is the ability to avoid doing work, yet getting the work done.</q>
-                                    					<cite>- Linus Trovalds</cite>
-                                    				</blockquote></div><div class="owl-item cloned active" style="width: 433px; margin-right: 0px;"><blockquote>
-                                    					<q>Elon Quotes - If something’s important enough, you should try. Even if you the probable outcome is failure.</q>
-                                    					<cite>- Elon Musk</cite>
-                                    				</blockquote></div><div class="owl-item" style="width: 433px; margin-right: 0px;"><blockquote>
-                                    					<q>Technology Quotes - You affect the world by what you browse.</q>
-                                    					<cite>- Tim Berners-Lee</cite>
-                                    				</blockquote></div><div class="owl-item" style="width: 433px; margin-right: 0px;"><blockquote>
-                                    					<q>Trovalds Quotes - Intelligence is the ability to avoid doing work, yet getting the work done.</q>
-                                    					<cite>- Linus Trovalds</cite>
-                                    				</blockquote></div><div class="owl-item" style="width: 433px; margin-right: 0px;"><blockquote>
-                                    					<q>Elon Quotes - If something’s important enough, you should try. Even if you the probable outcome is failure.</q>
-                                    					<cite>- Elon Musk</cite>
-                                    				</blockquote></div><div class="owl-item cloned" style="width: 433px; margin-right: 0px;"><blockquote>
-                                    					<q>Technology Quotes - You affect the world by what you browse.</q>
-                                    					<cite>- Tim Berners-Lee</cite>
-                                    				</blockquote></div><div class="owl-item cloned" style="width: 433px; margin-right: 0px;"><blockquote>
-                                    					<q>Trovalds Quotes - Intelligence is the ability to avoid doing work, yet getting the work done.</q>
-                                    					<cite>- Linus Trovalds</cite>
-                                    				</blockquote></div></div></div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;">prev</div><div class="owl-next" style="display: none;">next</div></div><div class="owl-dots" style="display: none;"></div></div></div>
-                                            </div>
-
-                                            
-
-                                        </div>
-                                    </div>
-                                </div></div><div class="owl-item" style="width: 1110px; margin-right: 0px;"><div class="col-sm-12 mh-featured-item">
-                                    <div class="row">
-                                        <div class="col-sm-7">
-                                            <div class="mh-featured-project-img shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.2s; animation-name: fadeInUp;">
-                                                <img src="http://localhost/dynamicprofile/profil/assets/images/4fe5786fab365ae0a4c2b5b791245f9d-comingsoon.jpg" alt="" class="img-fluid">
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-5">
-                                            <div class="mh-featured-project-content">
-
-                                           
-
-                                                <h4 class="project-category wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.4s; animation-name: fadeInUp;">Web Design</h4>
-                                                <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s; animation-name: fadeInUp;">Coming Soon</h2>
-                                                <span class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.6s; animation-name: fadeInUp;">XXX</span>
-                                                <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.7s; animation-name: fadeInUp;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis doloribus illo ex ducimus eum, molestiae voluptas amet commodi exercitationem aspernatur eveniet pariatur odio sunt, ipsum deserunt, consectetur qui error perspiciatis!</p>
-                                                <a href="#" target="_blank" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.7s; animation-name: fadeInUp;">View Details</a>
-                                                <div class="mh-testimonial mh-project-testimonial wow fadeInUp owl-carousel owl-theme owl-responsive-1170 owl-loaded" data-wow-duration="0.8s" data-wow-delay="0.9s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.9s; animation-name: fadeInUp;">
-                                                    
-                                    				
-                                    				
-                                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-433px, 0px, 0px); transition: all 0s ease 0s; width: 3031px;"><div class="owl-item cloned" style="width: 433px; margin-right: 0px;"><blockquote>
-                                    					<q>Trovalds Quotes - Intelligence is the ability to avoid doing work, yet getting the work done.</q>
-                                    					<cite>- Linus Trovalds</cite>
-                                    				</blockquote></div><div class="owl-item cloned active" style="width: 433px; margin-right: 0px;"><blockquote>
-                                    					<q>Elon Quotes - If something’s important enough, you should try. Even if you the probable outcome is failure.</q>
-                                    					<cite>- Elon Musk</cite>
-                                    				</blockquote></div><div class="owl-item" style="width: 433px; margin-right: 0px;"><blockquote>
-                                    					<q>Technology Quotes - You affect the world by what you browse.</q>
-                                    					<cite>- Tim Berners-Lee</cite>
-                                    				</blockquote></div><div class="owl-item" style="width: 433px; margin-right: 0px;"><blockquote>
-                                    					<q>Trovalds Quotes - Intelligence is the ability to avoid doing work, yet getting the work done.</q>
-                                    					<cite>- Linus Trovalds</cite>
-                                    				</blockquote></div><div class="owl-item" style="width: 433px; margin-right: 0px;"><blockquote>
-                                    					<q>Elon Quotes - If something’s important enough, you should try. Even if you the probable outcome is failure.</q>
-                                    					<cite>- Elon Musk</cite>
-                                    				</blockquote></div><div class="owl-item cloned" style="width: 433px; margin-right: 0px;"><blockquote>
-                                    					<q>Technology Quotes - You affect the world by what you browse.</q>
-                                    					<cite>- Tim Berners-Lee</cite>
-                                    				</blockquote></div><div class="owl-item cloned" style="width: 433px; margin-right: 0px;"><blockquote>
-                                    					<q>Trovalds Quotes - Intelligence is the ability to avoid doing work, yet getting the work done.</q>
-                                    					<cite>- Linus Trovalds</cite>
-                                    				</blockquote></div></div></div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;">prev</div><div class="owl-next" style="display: none;">next</div></div><div class="owl-dots" style="display: none;"></div></div></div>
-                                            </div>
-
-                                            
-
-                                        </div>
-                                    </div>
-                                </div></div></div></div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style=""><i class="fa fa-angle-left"></i></div><div class="owl-next" style=""><i class="fa fa-angle-right"></i></div></div><div class="owl-dots" style="display: none;"></div></div></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                     <!-- End: .row -->
-                
-            
+                    </div> <!-- End: .row -->
+                </div>
+            </div>
         </section>  
         
         <!--
@@ -637,14 +354,9 @@
                         </div>
                         <div class="col-sm-12 col-md-6">
                             <div class="mh-skills-inner">
-                                <div class="mh-professional-skill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                <div class="mh-professional-skill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
                                     <h3>Technical Skills</h3>
-
-                                    
-
                                     <div class="each-skills">
-
-                                    
                                         <div class="candidatos">
                                             <div class="parcial">
                                                 <div class="info">
@@ -656,21 +368,17 @@
                                                 </div>
                                             </div>
                                         </div>
-                                       
-                                        
                                         <div class="candidatos">
                                             <div class="parcial">
                                                 <div class="info">
                                                     <div class="nome">Java</div>
-                                                    <div class="percentagem-num">80%</div>
+                                                    <div class="percentagem-num">70%</div>
                                                 </div>
                                                 <div class="progressBar">
-                                                    <div class="percentagem" style="width: 80%;"></div>
+                                                    <div class="percentagem" style="width: 70%;"></div>
                                                 </div>
                                             </div>
                                         </div>
-                                       
-                                        
                                         <div class="candidatos">
                                             <div class="parcial">
                                                 <div class="info">
@@ -682,8 +390,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                       
-                                        
                                         <div class="candidatos">
                                             <div class="parcial">
                                                 <div class="info">
@@ -695,21 +401,17 @@
                                                 </div>
                                             </div>
                                         </div>
-                                       
-                                        
                                         <div class="candidatos">
                                             <div class="parcial">
                                                 <div class="info">
                                                     <div class="nome">c#</div>
-                                                    <div class="percentagem-num">80%</div>
+                                                    <div class="percentagem-num">70%</div>
                                                 </div>
                                                 <div class="progressBar">
-                                                    <div class="percentagem" style="width: 80%;"></div>
+                                                    <div class="percentagem" style="width: 70%;"></div>
                                                 </div>
                                             </div>
                                         </div>
-                                       
-                                        
                                         <div class="candidatos">
                                             <div class="parcial">
                                                 <div class="info">
@@ -721,34 +423,19 @@
                                                 </div>
                                             </div>
                                         </div>
-                                       
-                                        
                                         <div class="candidatos">
                                             <div class="parcial">
                                                 <div class="info">
                                                     <div class="nome">Javascript</div>
-                                                    <div class="percentagem-num">75%</div>
+                                                    <div class="percentagem-num">71%</div>
                                                 </div>
                                                 <div class="progressBar">
-                                                    <div class="percentagem" style="width: 75%;"></div>
+                                                    <div class="percentagem" style="width: 71%;"></div>
                                                 </div>
                                             </div>
-                                        </div>
-                                       
+                                        </div>                                    
                                         
-                                        <div class="candidatos">
-                                            <div class="parcial">
-                                                <div class="info">
-                                                    <div class="nome">CSS</div>
-                                                    <div class="percentagem-num">80%</div>
-                                                </div>
-                                                <div class="progressBar">
-                                                    <div class="percentagem" style="width: 80%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                       
-                                                                          
+                                  
                          
                                     </div>
                                 </div>
@@ -758,35 +445,31 @@
 
                         <div class="col-sm-12 col-md-6">
                             <div class="mh-skills-inner">
-                                <div class="mh-professional-skill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                <div class="mh-professional-skill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
                                     <h3>General Skills</h3>
                                     <div class="each-skills">
-
-                                    
                                         <div class="candidatos">
                                             <div class="parcial">
                                                 <div class="info">
                                                     <div class="nome">Microsoft Word</div>
-                                                    <div class="percentagem-num">90%</div>
+                                                    <div class="percentagem-num">86%</div>
                                                 </div>
                                                 <div class="progressBar">
-                                                    <div class="percentagem" style="width: 90%;"></div>
+                                                    <div class="percentagem" style="width: 86%;"></div>
                                                 </div>
                                             </div>
                                         </div>
-                                    
                                         <div class="candidatos">
                                             <div class="parcial">
                                                 <div class="info">
                                                     <div class="nome">Microsoft Excel</div>
-                                                    <div class="percentagem-num">85%</div>
+                                                    <div class="percentagem-num">75%</div>
                                                 </div>
                                                 <div class="progressBar">
-                                                    <div class="percentagem" style="width: 85%;"></div>
+                                                    <div class="percentagem" style="width: 75%;"></div>
                                                 </div>
                                             </div>
                                         </div>
-                                    
                                         <div class="candidatos">
                                             <div class="parcial">
                                                 <div class="info">
@@ -798,19 +481,20 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    
                                         <div class="candidatos">
                                             <div class="parcial">
                                                 <div class="info">
                                                     <div class="nome">Microsoft Power Point</div>
-                                                    <div class="percentagem-num">90%</div>
+                                                    <div class="percentagem-num">80%</div>
                                                 </div>
                                                 <div class="progressBar">
-                                                    <div class="percentagem" style="width: 90%;"></div>
+                                                    <div class="percentagem" style="width: 80%;"></div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    
+                                        </div>                                    
+                                        
+                                  
+                         
                                     </div>
                                 </div>
                             </div>
@@ -819,39 +503,35 @@
 
                         <div class="col-sm-12 col-md-6">
                             <div class="mh-skills-inner">
-                                <div class="mh-professional-skill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                <div class="mh-professional-skill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
                                    <br><br> <h3>Language</h3>
                                     <div class="each-skills">
-
-                                    
                                         <div class="candidatos">
                                             <div class="parcial">
                                                 <div class="info">
                                                     <div class="nome">Indonesian</div>
-                                                    <div class="percentagem-num">90%</div>
+                                                    <div class="percentagem-num">86%</div>
                                                 </div>
                                                 <div class="progressBar">
-                                                    <div class="percentagem" style="width: 90%;"></div>
+                                                    <div class="percentagem" style="width: 86%;"></div>
                                                 </div>
                                             </div>
-                                        </div>                                
-                                        
-                                  
-                                        
+                                        </div>
                                         <div class="candidatos">
                                             <div class="parcial">
                                                 <div class="info">
                                                     <div class="nome">English</div>
-                                                    <div class="percentagem-num">85%</div>
+                                                    <div class="percentagem-num">75%</div>
                                                 </div>
                                                 <div class="progressBar">
-                                                    <div class="percentagem" style="width: 85%;"></div>
+                                                    <div class="percentagem" style="width: 75%;"></div>
                                                 </div>
                                             </div>
-                                        </div>                                
+                                        </div>                                 
                                         
                                   
-                                                                            </div>
+                         
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -860,29 +540,26 @@
                         
 
                         <div class="col-sm-12 col-md-6">
-                            <div class="mh-professional-skills wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <div class="mh-professional-skills wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
                                 <br><br><h3>Professional Skills</h3>
-                                
                                 <ul class="mh-professional-progress">
-                                                                    <li>
-                                        <div class="mh-progress mh-progress-circle active" data-progress="85" style="position: relative;"><svg viewBox="0 0 100 100"><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#eee" stroke-width="5" fill-opacity="0"></path><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#555" stroke-width="5" fill-opacity="0" style="stroke-dasharray: 298.493, 298.493; stroke-dashoffset: 44.774;"></path></svg><p class="progressbar-text" style="position: absolute; top: 50%; left: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: rgb(85, 85, 85);">85%</p></div>
+                                    <li>
+                                        <div class="mh-progress mh-progress-circle" data-progress="80"></div>
                                         <div class="pr-skill-name">Communication</div>
                                     </li>
-                                                                        <li>
-                                        <div class="mh-progress mh-progress-circle active" data-progress="65" style="position: relative;"><svg viewBox="0 0 100 100"><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#eee" stroke-width="5" fill-opacity="0"></path><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#555" stroke-width="5" fill-opacity="0" style="stroke-dasharray: 298.493, 298.493; stroke-dashoffset: 104.473;"></path></svg><p class="progressbar-text" style="position: absolute; top: 50%; left: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: rgb(85, 85, 85);">65%</p></div>
+                                    <li>
+                                        <div class="mh-progress mh-progress-circle" data-progress="55"></div> 
                                         <div class="pr-skill-name">Team Work</div>
                                     </li>
-                                                                        <li>
-                                        <div class="mh-progress mh-progress-circle active" data-progress="75" style="position: relative;"><svg viewBox="0 0 100 100"><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#eee" stroke-width="5" fill-opacity="0"></path><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#555" stroke-width="5" fill-opacity="0" style="stroke-dasharray: 298.493, 298.493; stroke-dashoffset: 74.6233;"></path></svg><p class="progressbar-text" style="position: absolute; top: 50%; left: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: rgb(85, 85, 85);">75%</p></div>
+                                    <li>
+                                        <div class="mh-progress mh-progress-circle" data-progress="75"></div>
                                         <div class="pr-skill-name">Project Management</div>
-                                    </li>
-                                                                        <li>
-                                        <div class="mh-progress mh-progress-circle active" data-progress="70" style="position: relative;"><svg viewBox="0 0 100 100"><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#eee" stroke-width="5" fill-opacity="0"></path><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#555" stroke-width="5" fill-opacity="0" style="stroke-dasharray: 298.493, 298.493; stroke-dashoffset: 89.548;"></path></svg><p class="progressbar-text" style="position: absolute; top: 50%; left: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: rgb(85, 85, 85);">70%</p></div>
+                                    </li> 
+                                    <li>
+                                        <div class="mh-progress mh-progress-circle" data-progress="60"></div>
                                         <div class="pr-skill-name">Creativity</div>
                                     </li>
-                                                                    </ul>
-                                    
-
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -901,109 +578,90 @@
                     <div class="row section-separator">
                         <div class="col-sm-12 col-md-6">
                             <div class="mh-education">
-                                <h3 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.2s; animation-name: fadeInUp;">Education</h3>
+                                <h3 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Education</h3>
                                 <div class="mh-education-deatils">
-
-                                
                                      <!-- Education Institutes-->
-                                     <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                     <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
                                        <h4>Universitas (University) <br> <a href="#">Universitas Nasional</a></h4>
 					     <div class="mh-eduyear">Jakarta</div>
                                        <div class="mh-eduyear">2018-2021</div>
                                        <p>Information System degree or IT</p>
                                    </div> 
-
-                            
-                                     <!-- Education Institutes-->
-                                     <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.3s; animation-name: fadeInUp;">
-                                       <h4>Sekolah Menengah Akhir (Senior High School) <br> <a href="#">SMA Muhammadiyah 3</a></h4>
-					     <div class="mh-eduyear">Jakarta</div>
-                                       <div class="mh-eduyear">2010-2013</div>
-                                       <p>Has attended senior high school for 3 years</p>
-                                   </div> 
-
-                            
-                                     <!-- Education Institutes-->
-                                     <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.3s; animation-name: fadeInUp;">
-                                       <h4>Sekolah Menengah Pertama (Junior High School) <br> <a href="#">SMP Triguna</a></h4>
-					     <div class="mh-eduyear">Jakarta</div>
-                                       <div class="mh-eduyear">2006-2010</div>
-                                       <p>Has attended junior high school for 3 years</p>
-                                   </div> 
-
-                            
-                                     <!-- Education Institutes-->
-                                     <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.3s; animation-name: fadeInUp;">
-                                       <h4>Sekolah Dasar (Primary School) <br> <a href="#">SDI Al Azhar</a></h4>
-					     <div class="mh-eduyear">Jakarta</div>
-                                       <div class="mh-eduyear">2001-2006</div>
-                                       <p>Attended primary school education for 6 years</p>
-                                   </div> 
-
-                                                    </div>
-                    </div>
-                </div>
-
-                       
-
+                                    <!-- Education Institutes-->
+                                    <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                                        <h4>Sekolah Menengah Akhir (Senior High School) <br> <a href="#">SMA Muhammadiyah 3</a></h4>
+					    <div class="mh-eduyear">Jakarta</div>
+                                        <div class="mh-eduyear">2010-2013</div>
+                                        <p>Has attended senior high school for 3 years</p>
+                                    </div>                                
+                                    <!-- Education Institutes-->
+                                    <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
+                                        <h4>Sekolah Menengah Pertama (Junior High School) <br> <a href="#">SMP Triguna</a></h4>
+					    <div class="mh-eduyear">Jakarta</div>
+                                        <div class="mh-eduyear">2006-2010</div>
+                                        <p>Has attended junior high school for 3 years </p>
+                                    </div>                                
+                                    <!-- Education Institutes-->
+                                    <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
+                                        <h4>Sekolah Dasar (Primary School) <br> <a href="#">SDI Al Azhar</a></h4>
+					    <div class="mh-eduyear">Jakarta</div>
+                                        <div class="mh-eduyear">2001-2006</div>
+                                        <p>Attended primary school education for 6 years </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-sm-12 col-md-6">
                             <div class="mh-work">
                                  <h3>Work Experience</h3>
-                                <div class="mh-experience-deatils">   
-                                
-                                                                
+                                <div class="mh-experience-deatils">                             
                                     <!-- Education Institutes-->
-                                    <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.6s; animation-name: fadeInUp;">
-                                        <h4>Fullstack Developer <br> <a href="https://www.one-code.id/" target="_blank">PT. Logika Satu Visi</a></h4>
-					                    <div class="mh-eduyear">Tangerang</div>
-                                        <div class="mh-eduyear">June 2022</div>
-                                        <span>Responsibility :</span>
-                                        <ul class="work-responsibility">
-                                            <li><i class=""></i>HPS Pertamina GOWES Project</li>
-                                        </ul>
-                                    </div> 
-
-                                                                    
-                                    <!-- Education Institutes-->
-                                    <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.6s; animation-name: fadeInUp;">
-                                        <h4>Backend Developer <br> <a href="https://services.global.ntt/" target="_blank">NTT .Ltd</a></h4>
-					                    <div class="mh-eduyear">Jakarta</div>
-                                        <div class="mh-eduyear">January 2022 - June 2022</div>
-                                        <span>Responsibility :</span>
-                                        <ul class="work-responsibility">
-                                            <li><i class=""></i>Building and support Integrated Core System for Lembaga Penjamin Simpanan Project</li>
-                                        </ul>
-                                    </div> 
-
-                                                                    
-                                    <!-- Education Institutes-->
-                                    <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.6s; animation-name: fadeInUp;">
-                                        <h4>System Analyst <br> <a href="https://services.global.ntt/" target="_blank">NTT .Ltd</a></h4>
-					                    <div class="mh-eduyear">Jakarta</div>
-                                        <div class="mh-eduyear">September 2021 - December 2021</div>
-                                        <span>Responsibility :</span>
-                                        <ul class="work-responsibility">
-                                            <li><i class=""></i>1. Making domain model with iconix method<br>
-2. Making robust analysis with iconix method<br>
-3. Making sequence diagram with iconix method<br>
-4. Write Technical Specification Document (TSD)</li>
-                                        </ul>
-                                    </div> 
-
-                                                                    
-                                    <!-- Education Institutes-->
-                                    <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.6s; animation-name: fadeInUp;">
+                                    <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
                                         <h4>Web Developer <br> <a href="https://www.dprojakarta.com/" target="_blank">PT. Dian Permata Omega</a></h4>
-					                    <div class="mh-eduyear">Jakarta</div>
+					<div class="mh-eduyear">Jakarta</div>
                                         <div class="mh-eduyear">September 2020 - December 2020</div>
                                         <span>Responsibility :</span>
                                         <ul class="work-responsibility">
-                                            <li><i class=""></i>1. Build Website Interface<br>
-2. Maintenance website for every division</li>
+                                            <li><i class="fa fa-circle"></i>Build Website Interface</li>
+                                            <li><i class="fa fa-circle"></i>Maintenance website for every division</li>
                                         </ul>
                                     </div> 
-
-                                    				
+					
+				    <!-- Education Institutes-->
+                                    <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
+                                        <h4>System Analyst <br>NTT.Ltd</a></h4>
+					<div class="mh-eduyear">Jakarta</div>
+                                        <div class="mh-eduyear">September 2021 - December 2021</div>
+                                        <span>Responsibility :</span>
+                                        <ul class="work-responsibility">
+                                            <li><i class="fa fa-circle"></i>Making domain model with iconix method</li>
+					    <li><i class="fa fa-circle"></i>Making robust analysis with iconix method</li>
+					    <li><i class="fa fa-circle"></i>Making sequence diagram with iconix method</li>
+					    <li><i class="fa fa-circle"></i>Write Technical Specification Document (TSD)</li>
+                                        </ul>
+                                    </div>
+				    
+				    <!-- Education Institutes-->
+                                    <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
+                                        <h4>Backend Developer <br>NTT.Ltd</a></h4>
+					<div class="mh-eduyear">Jakarta</div>
+                                        <div class="mh-eduyear">January 2022 - June 2022</div>
+                                        <span>Responsibility :</span>
+                                        <ul class="work-responsibility">
+                                            <li><i class="fa fa-circle"></i>Building and support Integrated Core System for Lembaga Penjamin Simpanan Project</li>
+                                        </ul>
+                                    </div>
+				
+				    <!-- Education Institutes-->
+                                    <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
+                                        <h4>Fullstack Developer <br>PT. Logika Satu Visi</a></h4>
+					<div class="mh-eduyear">Tangerang</div>
+                                        <div class="mh-eduyear">June 2022</div>
+                                        <span>Responsibility :</span>
+                                        <ul class="work-responsibility">
+                                            <li><i class="fa fa-circle"></i>HPS Pertamina GOWES Project</li>
+                                        </ul>
+                                    </div>
                                   
                                 </div>
                             </div>
@@ -1021,341 +679,175 @@
         <section class="mh-portfolio" id="mh-portfolio">
             <div class="container">
                 <div class="row section-separator">
-                    <div class="section-title col-sm-12 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.1s; animation-name: fadeInUp;">
+                    <div class="section-title col-sm-12 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
                         <h3>Portfolio</h3>
                     </div>
                     <div class="part col-sm-12">
                         <div class="portfolio-nav col-sm-12" id="filter-button">
                             <ul>
-                            <li data-filter="*" class="current wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.1s; animation-name: fadeInUp;"> <span>All Categories</span></li>
-                                                            
-                                <li data-filter=".1" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.1s; animation-name: fadeInUp;"><span>Web Design</span></li>
-                                <!--
                                 <li data-filter="*" class="current wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s"> <span>All Categories</span></li>
                                 <li data-filter=".user-interface" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s"><span>Web Design</span></li>
                                 <li data-filter=".apps" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s"><span>Apps Development</span></li>
                                 <li data-filter=".mockup" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"><span>Mockups</span></li>
                                 <li data-filter=".photo" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s"><span>Photography</span></li>
-                                !-->
-                                                                
-                                <li data-filter=".2" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.1s; animation-name: fadeInUp;"><span>Apps Development</span></li>
-                                <!--
-                                <li data-filter="*" class="current wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s"> <span>All Categories</span></li>
-                                <li data-filter=".user-interface" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s"><span>Web Design</span></li>
-                                <li data-filter=".apps" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s"><span>Apps Development</span></li>
-                                <li data-filter=".mockup" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"><span>Mockups</span></li>
-                                <li data-filter=".photo" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s"><span>Photography</span></li>
-                                !-->
-                                                                
-                                <li data-filter=".3" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.1s; animation-name: fadeInUp;"><span>Mockups</span></li>
-                                <!--
-                                <li data-filter="*" class="current wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s"> <span>All Categories</span></li>
-                                <li data-filter=".user-interface" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s"><span>Web Design</span></li>
-                                <li data-filter=".apps" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s"><span>Apps Development</span></li>
-                                <li data-filter=".mockup" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"><span>Mockups</span></li>
-                                <li data-filter=".photo" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s"><span>Photography</span></li>
-                                !-->
-                                                                
-                                <li data-filter=".4" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.1s; animation-name: fadeInUp;"><span>Photography</span></li>
-                                <!--
-                                <li data-filter="*" class="current wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s"> <span>All Categories</span></li>
-                                <li data-filter=".user-interface" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s"><span>Web Design</span></li>
-                                <li data-filter=".apps" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s"><span>Apps Development</span></li>
-                                <li data-filter=".mockup" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"><span>Mockups</span></li>
-                                <li data-filter=".photo" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s"><span>Photography</span></li>
-                                !-->
-                                                            </ul>
+                            </ul>
                         </div>
-                        <div class="mh-project-gallery col-sm-12 wow fadeInUp" id="project-gallery" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s; animation-name: fadeInUp;">
-                            <div class="portfolioContainer row" style="position: relative; height: 1446.1px;">
-                                                            
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 1" style="position: absolute; left: 0px; top: 0px;">
-                                    
+                        <div class="mh-project-gallery col-sm-12 wow fadeInUp" id="project-gallery" data-wow-duration="0.8s" data-wow-delay="0.5s">
+                            <div class="portfolioContainer row">
+                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface">
                                     <figure>
-                                        
-                                        <img src="http://localhost/dynamicprofile/profil/assets/images/portofolio/3411d0672e7d2e7fefe2457a76f146d6-g1.jpg" alt="img04">
+                                        <img src="assets/images/portfolio/g1.jpg" alt="img04">
                                         <figcaption class="fig-caption">
                                             <i class="fa fa-search"></i>
                                             <h5 class="title">D'pro</h5>
-                                            
-
-
-
-                                            
                                             <span class="sub-title">Web Design</span>
-                                            <a href="http://localhost/dynamicprofile/profil/assets/images/portofolio/3411d0672e7d2e7fefe2457a76f146d6-g1.jpg" data-fancybox="gallery"></a>
+                                            <a href="assets/images/portfolio/g1.jpg" data-fancybox="gallery"></a>
                                         </figcaption>
                                     </figure>
                                 </div>
-
-      
-                                                                
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 1" style="position: absolute; left: 370px; top: 0px;">
-                                    
+                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 mockup">
                                     <figure>
-                                        
-                                        <img src="http://localhost/dynamicprofile/profil/assets/images/portofolio/ed85a1717efd54ea3350afe9dc16a70a-blakangruko.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Blakang Ruko</h5>
-                                            
-
-
-
-                                            
-                                            <span class="sub-title">Web Design</span>
-                                            <a href="http://localhost/dynamicprofile/profil/assets/images/portofolio/ed85a1717efd54ea3350afe9dc16a70a-blakangruko.png" data-fancybox="gallery"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-
-      
-                                                                
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 1" style="position: absolute; left: 740px; top: 0px;">
-                                    
-                                    <figure>
-                                        
-                                        <img src="http://localhost/dynamicprofile/profil/assets/images/portofolio/c6c7e08c22b455453fc6a7f1db4162b0-6.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">PHP</h5>
-                                            
-
-
-
-                                            
-                                            <span class="sub-title">Web Design</span>
-                                            <a href="http://localhost/dynamicprofile/profil/assets/images/portofolio/c6c7e08c22b455453fc6a7f1db4162b0-6.png" data-fancybox="gallery"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-
-      
-                                                                
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 2" style="position: absolute; left: 740px; top: 160px;">
-                                    
-                                    <figure>
-                                        
-                                        <img src="http://localhost/dynamicprofile/profil/assets/images/portofolio/b8b35e1577d33c168d842c5636b735aa-visual1.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Visual Basic CRUD</h5>
-                                            
-
-
-
-                                            
-                                            <span class="sub-title">Apps Development</span>
-                                            <a href="http://localhost/dynamicprofile/profil/assets/images/portofolio/b8b35e1577d33c168d842c5636b735aa-visual1.png" data-fancybox="gallery"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-
-      
-                                                                
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 4" style="position: absolute; left: 0px; top: 197px;">
-                                    
-                                    <figure>
-                                        
-                                        <img src="http://localhost/dynamicprofile/profil/assets/images/portofolio/6aa81b79cdf73d65398ef016712caf8f-p4.jpg" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Coffee</h5>
-                                            
-
-
-
-                                            
-                                            <span class="sub-title">Photography</span>
-                                            <a href="http://localhost/dynamicprofile/profil/assets/images/portofolio/6aa81b79cdf73d65398ef016712caf8f-p4.jpg" data-fancybox="gallery"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-
-      
-                                                                
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 4" style="position: absolute; left: 370px; top: 200px;">
-                                    
-                                    <figure>
-                                        
-                                        <img src="http://localhost/dynamicprofile/profil/assets/images/portofolio/38d5103485c5fa08cb4940af05994e32-p3.jpg" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Direction</h5>
-                                            
-
-
-
-                                            
-                                            <span class="sub-title">Photography</span>
-                                            <a href="http://localhost/dynamicprofile/profil/assets/images/portofolio/38d5103485c5fa08cb4940af05994e32-p3.jpg" data-fancybox="gallery"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-
-      
-                                                                
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 2" style="position: absolute; left: 740px; top: 506px;">
-                                    
-                                    <figure>
-                                        
-                                        <img src="http://localhost/dynamicprofile/profil/assets/images/portofolio/1c0666794a958c06efeedd20f38f1365-visual2.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Visual Basic CRUD</h5>
-                                            
-
-
-
-                                            
-                                            <span class="sub-title">Apps Development</span>
-                                            <a href="http://localhost/dynamicprofile/profil/assets/images/portofolio/1c0666794a958c06efeedd20f38f1365-visual2.png" data-fancybox="gallery"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-
-      
-                                                                
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 2" style="position: absolute; left: 0px; top: 573px;">
-                                    
-                                    <figure>
-                                        
-                                        <img src="http://localhost/dynamicprofile/profil/assets/images/portofolio/1d66dcc40a7a5eb01cf63030464ca32e-a1.jpg" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Mobile Apps</h5>
-                                            
-
-
-
-                                            
-                                            <span class="sub-title">Apps Development</span>
-                                            <a href="http://localhost/dynamicprofile/profil/assets/images/portofolio/1d66dcc40a7a5eb01cf63030464ca32e-a1.jpg" data-fancybox="gallery"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-
-      
-                                                                
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 2" style="position: absolute; left: 370px; top: 576px;">
-                                    
-                                    <figure>
-                                        
-                                        <img src="http://localhost/dynamicprofile/profil/assets/images/portofolio/5ddd2beb77ed7545eff9bb7adf7f657c-a4.jpg" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Mobile Apps</h5>
-                                            
-
-
-
-                                            
-                                            <span class="sub-title">Apps Development</span>
-                                            <a href="http://localhost/dynamicprofile/profil/assets/images/portofolio/5ddd2beb77ed7545eff9bb7adf7f657c-a4.jpg" data-fancybox="gallery"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-
-      
-                                                                
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 1" style="position: absolute; left: 740px; top: 823px;">
-                                    
-                                    <figure>
-                                        
-                                        <img src="http://localhost/dynamicprofile/profil/assets/images/portofolio/9ef3b4be0115d5433dd58d22caf3f1b0-laravel1.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Laravel CRUD</h5>
-                                            
-
-
-
-                                            
-                                            <span class="sub-title">Web Design</span>
-                                            <a href="http://localhost/dynamicprofile/profil/assets/images/portofolio/9ef3b4be0115d5433dd58d22caf3f1b0-laravel1.png" data-fancybox="gallery"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-
-      
-                                                                
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 2" style="position: absolute; left: 0px; top: 944px;">
-                                    
-                                    <figure>
-                                        
-                                        <img src="http://localhost/dynamicprofile/profil/assets/images/portofolio/a721fda5169fd635913a39f581b87124-gamepong.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Game Pong</h5>
-                                            
-
-
-
-                                            
-                                            <span class="sub-title">Apps Development</span>
-                                            <a href="http://localhost/dynamicprofile/profil/assets/images/portofolio/a721fda5169fd635913a39f581b87124-gamepong.png" data-fancybox="gallery"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-
-      
-                                                                
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 4" style="position: absolute; left: 740px; top: 1033px;">
-                                    
-                                    <figure>
-                                        
-                                        <img src="http://localhost/dynamicprofile/profil/assets/images/portofolio/a20e9f50fce80a48bfa285d67b0177e0-p2.jpg" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Palm</h5>
-                                            
-
-
-
-                                            
-                                            <span class="sub-title">Photography</span>
-                                            <a href="http://localhost/dynamicprofile/profil/assets/images/portofolio/a20e9f50fce80a48bfa285d67b0177e0-p2.jpg" data-fancybox="gallery"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-
-      
-                                                                
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 4" style="position: absolute; left: 370px; top: 1038px;">
-                                    
-                                    <figure>
-                                        
-                                        <img src="http://localhost/dynamicprofile/profil/assets/images/portofolio/4106aded46f2611e4c13efc8e6e90f0a-p1.jpg" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Sky</h5>
-                                            
-
-
-
-                                            
-                                            <span class="sub-title">Photography</span>
-                                            <a href="http://localhost/dynamicprofile/profil/assets/images/portofolio/4106aded46f2611e4c13efc8e6e90f0a-p1.jpg" data-fancybox="gallery"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-
-      
-                                
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 mockup" style="position: absolute; left: 0px; top: 1155px;">
-                                    <figure>
-                                        <img src="assets/images/portofolio/comingsoon.jpg" alt="img04">
+                                        <img src="assets/images/portfolio/comingsoon.jpg" alt="img04">
                                         <figcaption class="fig-caption">
                                             <i class="fa fa-search"></i>
                                             <h5 class="title">Mockups</h5>
                                             <span class="sub-title">Coming Soon</span>
-                                            <a href="assets/images/portfolio/comingsoon.jpg" data-fancybox="" data-src="#mh"></a>
+                                            <a href="assets/images/portfolio/comingsoon.jpg" data-fancybox data-src="#mh"></a>
                                         </figcaption>
                                     </figure>
                                 </div>
-
-
-                                
+                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface">
+                                    <figure>
+                                        <img src="assets/images/portfolio/blakangruko.png" alt="img04">
+                                        <figcaption class="fig-caption">
+                                            <i class="fa fa-search"></i>
+                                            <h5 class="title">Blakang Ruko</h5>
+                                            <span class="sub-title">Web Design</span>
+                                            <a href="assets/images/portfolio/blakangruko.png" data-fancybox="gallery"></a>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 apps">
+                                    <figure>
+                                        <img src="assets/images/portfolio/a1.jpg" alt="img04">
+                                        <figcaption class="fig-caption">
+                                            <i class="fa fa-search"></i>
+                                            <h5 class="title">Mobile Apps</h5>
+                                            <span class="sub-title">Apps Development</span>
+                                            <a href="assets/images/portfolio/a1.jpg" data-fancybox="gallery"></a>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface">
+                                    <figure>
+                                        <img src="assets/images/portfolio/6.png" alt="img04">
+                                        <figcaption class="fig-caption">
+                                            <i class="fa fa-search"></i>
+                                            <h5 class="title">PHP</h5>
+                                            <span class="sub-title">Web Design</span>
+                                            <a href="assets/images/portfolio/6.png" data-fancybox="gallery"></a>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 apps">
+                                    <figure>
+                                        <img src="assets/images/portfolio/visual1.png" alt="img04">
+                                        <figcaption class="fig-caption">
+                                            <i class="fa fa-search"></i>
+                                            <h5 class="title">Visual Basic CRUD</h5>
+                                            <span class="sub-title">Apps Development</span>
+                                            <a href="assets/images/portfolio/visual1.png" data-fancybox="gallery"></a>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 apps">
+                                    <figure>
+                                        <img src="assets/images/portfolio/a4.jpg" alt="img04">
+                                        <figcaption class="fig-caption">
+                                            <i class="fa fa-search"></i>
+                                            <h5 class="title">Mobile Apps</h5>
+                                            <span class="sub-title">Apps Development</span>
+                                            <a href="assets/images/portfolio/a4.jpg" data-fancybox="gallery"></a>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 photo">
+                                    <figure>
+                                        <img src="assets/images/portfolio/p4.jpg" alt="img04">
+                                        <figcaption class="fig-caption">
+                                            <i class="fa fa-search"></i>
+                                            <h5 class="title">Coffee</h5>
+                                            <span class="sub-title">Photography</span>
+                                            <a href="assets/images/portfolio/p4.jpg" data-fancybox="gallery"></a>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface">
+                                    <figure>
+                                        <img src="assets/images/portfolio/laravel1.png" alt="img04">
+                                        <figcaption class="fig-caption">
+                                            <i class="fa fa-search"></i>
+                                            <h5 class="title">Laravel CRUD</h5>
+                                            <span class="sub-title">Web Design</span>
+                                            <a href="assets/images/portfolio/laravel1.png" data-fancybox="gallery"></a>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 photo">
+                                    <figure>
+                                        <img src="assets/images/portfolio/p3.jpg" alt="img04">
+                                        <figcaption class="fig-caption">
+                                            <i class="fa fa-search"></i>
+                                            <h5 class="title">Direction</h5>
+                                            <span class="sub-title">Photography</span>
+                                            <a href="assets/images/portfolio/p3.jpg" data-fancybox="gallery"></a>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 apps">
+                                    <figure>
+                                        <img src="assets/images/portfolio/gamepong.png" alt="img04">
+                                        <figcaption class="fig-caption">
+                                            <i class="fa fa-search"></i>
+                                            <h5 class="title">Game Pong</h5>
+                                            <span class="sub-title">Apps Development</span>
+                                            <a href="assets/images/portfolio/gamepong.png" data-fancybox="gallery"></a>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 photo">
+                                    <figure>
+                                        <img src="assets/images/portfolio/p2.jpg" alt="img04">
+                                        <figcaption class="fig-caption">
+                                            <i class="fa fa-search"></i>
+                                            <h5 class="title">Palm</h5>
+                                            <span class="sub-title">Photography</span>
+                                            <a href="assets/images/portfolio/p2.jpg" data-fancybox="gallery"></a>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 apps">
+                                    <figure>
+                                        <img src="assets/images/portfolio/visual2.png" alt="img04">
+                                        <figcaption class="fig-caption">
+                                            <i class="fa fa-search"></i>
+                                            <h5 class="title">Visual Basic CRUD</h5>
+                                            <span class="sub-title">Apps Development</span>
+                                            <a href="assets/images/portfolio/visual2.png" data-fancybox="gallery"></a>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 photo">
+                                    <figure>
+                                        <img src="assets/images/portfolio/p1.jpg" alt="img04">
+                                        <figcaption class="fig-caption">
+                                            <i class="fa fa-search"></i>
+                                            <h5 class="title">Sky</h5>
+                                            <span class="sub-title">Photography</span>
+                                            <a href="assets/images/portfolio/p1.jpg" data-fancybox="gallery"></a>
+                                        </figcaption>
+                                    </figure>
+                                </div>
                             </div> <!-- End: .grid .project-gallery -->
                         </div> <!-- End: .grid .project-gallery -->
                     </div> <!-- End: .part -->
@@ -1401,181 +893,103 @@
         ===================
         -->
         <section class="mh-certificate image-bg home-bg-image" id="mh-certificate">
-        
             <div class="container">
                 <div class="row section-separator">
-
-                
-
-                    <div class="section-title col-sm-12 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s" style="visibility: hidden; animation-duration: 0.8s; animation-delay: 0.1s; animation-name: none;">
-                        <h3>Certificate &amp; Achievment</h3>
+                    <div class="section-title col-sm-12 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
+                        <h3>Certificate & Achievment</h3>
                         <br><br>
-                        
                         <div class="carousel slide" id="cc-Indicators" data-ride="carousel" style="cursor: pointer;">
-                            
                             <ol class="carousel-indicators">
-                            
                               <li class="active" data-target="#cc-Indicators" data-slide-to="0"></li>
-
-
-                            
-                                                            <li data-target="#cc-Indicators" data-slide-to="1"></li>
-                              
-
-                                                          <li data-target="#cc-Indicators" data-slide-to="2"></li>
-                              
-
-                                                          <li data-target="#cc-Indicators" data-slide-to="3"></li>
-                              
-
-                                                          <li data-target="#cc-Indicators" data-slide-to="4"></li>
-                              
-
-                                                        </ol>
-                            
-                            
+                              <li data-target="#cc-Indicators" data-slide-to="1"></li>
+                              <li data-target="#cc-Indicators" data-slide-to="2"></li>
+                              <li data-target="#cc-Indicators" data-slide-to="3"></li>
+			      <li data-target="#cc-Indicators" data-slide-to="4"></li>
+                            </ol>
                             <div class="carousel-inner">
-
-                                                        <div class="carousel-item active">
+                              <div class="carousel-item active">
                                 <div class="row">
-                                  
-                                <div class="col-lg-2 col-md-3 cc-reference-header">
-
-                                <a href="http://localhost/dynamicprofile/profil/assets/images/253883575774644b49d92f7235a15628-Cert6190223638.pdf" style="display: inline-block; left:auto;" target="_blank"> 
-                                </a><a href="http://localhost/dynamicprofile/profil/assets/images/253883575774644b49d92f7235a15628-Cert6190223638.pdf" style="display:inline-block;" target="_blank"><embed style="pointer-events: none; background: transparent;" src="http://localhost/dynamicprofile/profil/assets/images/253883575774644b49d92f7235a15628-Cert6190223638.pdf"></a>   
-
-                                <div class="h5 pt-2">Software Development Fundamentals</div>
-                                <p class="category">Microsoft</p>
-                                </div>
-                                <div class="col-lg-10 col-md-9">
-                                <p>
-                                Software Development Fundamentals from microsoft with c#                                </p>
-                                </div>
-
+                                  <div class="col-lg-2 col-md-3 cc-reference-header"><a href="assets/images/Cert6190223638.pdf" target="_blank"><img
+                                        src="assets/images/sda.png" height="160px" width="160px" alt="Image" /></a>
+                                    <div class="h5 pt-2">Software Development Fundamentals</div>
+                                    <p class="category">Microsoft</p>
+                                  </div>
+                                  <div class="col-lg-10 col-md-9">
+                                    <p>
+                                        Software Development Fundamentals from microsoft with c#
+                                    </p>
+                                  </div>
                                 </div>
                               </div>
-                              
-                            
-                                                          <div class="carousel-item">
-                                
-                              
-
+				    
+                              <div class="carousel-item">
                                 <div class="row">
-                                
-                                
-
-
-                                  <div class="col-lg-2 col-md-3 cc-reference-header">
-
-                                        <a href="http://localhost/dynamicprofile/profil/assets/images/d191322ed038425e8f4e7f5c2a680a0e-sertifikat_peserta_webinar 6_page-0001.pdf" style="display: inline-block; left:auto;" target="_blank"> 
-                                  </a><a href="http://localhost/dynamicprofile/profil/assets/images/d191322ed038425e8f4e7f5c2a680a0e-sertifikat_peserta_webinar 6_page-0001.pdf" style="display:inline-block;" target="_blank"><embed style="pointer-events: none; background: transparent;" src="http://localhost/dynamicprofile/profil/assets/images/d191322ed038425e8f4e7f5c2a680a0e-sertifikat_peserta_webinar 6_page-0001.pdf"></a>   
-
+                                  <div class="col-lg-2 col-md-3 cc-reference-header"> <a href="assets/images/sertifikat_peserta_webinar 6_page-0001.pdf" target="_blank">
+                                      <img src="assets/images/mlmobile.png" height="160px" width="160px" alt="Image" /> </a>
                                     <div class="h5 pt-2">Machine Learning Android Apps</div>
-                                    <p class="category">Research Soft</p>
+                                    <a href="#"></a>
+                                    <p class="category">Research Soft</p></a>
                                   </div>
                                   <div class="col-lg-10 col-md-9">
-                                    <p>
-                                        Integrasi Pembelajaran Mesin ke dalam aplikasi Berbasis Android yang diselenggarakan oleh research soft                                    </p>
+                                    <p> Integrasi Pembelajaran Mesin ke dalam aplikasi Berbasis Android yang diselenggarakan oleh research soft
+                
+                                    </p>
                                   </div>
-
-                                 
-
                                 </div>
-                                
                               </div>
-                                                            <div class="carousel-item">
-                                
-                              
-
+				
+                              <div class="carousel-item">
                                 <div class="row">
-                                
-                                
-
-
-                                  <div class="col-lg-2 col-md-3 cc-reference-header">
-
-                                        <a href="http://localhost/dynamicprofile/profil/assets/images/9e92a49adaf7cfc54481bddc1f9f02b8-datamining.pdf" style="display: inline-block; left:auto;" target="_blank"> 
-                                  </a><a href="http://localhost/dynamicprofile/profil/assets/images/9e92a49adaf7cfc54481bddc1f9f02b8-datamining.pdf" style="display:inline-block;" target="_blank"><embed style="pointer-events: none; background: transparent;" src="http://localhost/dynamicprofile/profil/assets/images/9e92a49adaf7cfc54481bddc1f9f02b8-datamining.pdf"></a>   
-
-                                    <div class="h5 pt-2">Data Mining &amp; Data Science</div>
-                                    <p class="category">Pens</p>
+                                  <div class="col-lg-2 col-md-3 cc-reference-header"> <a href="assets/images/datamining.pdf" target="_blank"><img
+                                        src="assets/images/datamining.png" height="160px" width="160px" alt="Image" /></a>
+                                    <div class="h5 pt-2">Data Mining & Data Science</div>
+                                    <a href="#">
+                                      <p class="category">Pens</p>
+                                    </a>
                                   </div>
                                   <div class="col-lg-10 col-md-9">
-                                    <p>
-                                        Sertifikat Data Mining dan Data Science dari webinar yang diselenggarakan oleh magister Pens.                                    </p>
+                                    <p> Sertifikat Data Mining dan Data Science dari webinar yang diselenggarakan oleh magister Pens.</p>
                                   </div>
-
-                                 
-
                                 </div>
-                                
                               </div>
-                                                            <div class="carousel-item">
-                                
-                              
-
+				
+                              <div class="carousel-item">
                                 <div class="row">
-                                
-                                
-
-
-                                  <div class="col-lg-2 col-md-3 cc-reference-header">
-
-                                        <a href="http://localhost/dynamicprofile/profil/assets/images/9400f0bd9f4cabfef0118991caf106c6-webdescert.pdf" style="display: inline-block; left:auto;" target="_blank"> 
-                                  </a><a href="http://localhost/dynamicprofile/profil/assets/images/9400f0bd9f4cabfef0118991caf106c6-webdescert.pdf" style="display:inline-block;" target="_blank"><embed style="pointer-events: none; background: transparent;" src="http://localhost/dynamicprofile/profil/assets/images/9400f0bd9f4cabfef0118991caf106c6-webdescert.pdf"></a>   
-
+                                  <div class="col-lg-2 col-md-3 cc-reference-header"> <a href="assets/images/webdescert.pdf" target="_blank"><img
+                                        src="assets/images/webdesigncert.jpg" height="160px" width="160px" alt="Image" /></a>
                                     <div class="h5 pt-2">How To Become A Web Designer</div>
-                                    <p class="category">Workshop UIN</p>
-                                  </div>
-                                  <div class="col-lg-10 col-md-9">
-                                    <p>
-                                        Introduction of HTML, CSS, Javascript and SASS yang diselenggarakan pada bulan mei dan workshop di selenggarakan oleh UIN.                                    </p>
-                                  </div>
-
-                                 
-
+                                    <a href="#">
+                                      <p class="category">Workshop UIN</p>
+                                  </div> </a>
+                               
+                                <div class="col-lg-10 col-md-9">
+                                  <p> Introduction of HTML, CSS, Javascript and SASS yang diselenggarakan pada bulan mei dan workshop di selenggarakan oleh UIN.</p>
                                 </div>
-                                
                               </div>
-                                                            <div class="carousel-item">
-                                
-                              
-
+                            </div>
+                        
+			    
+			    <div class="carousel-item">
                                 <div class="row">
-                                
-                                
-
-
-                                  <div class="col-lg-2 col-md-3 cc-reference-header">
-
-                                        <a href="http://localhost/dynamicprofile/profil/assets/images/40f54048d37b4e54d6f558db8d840c1e-sertifmagangdpro.pdf" style="display: inline-block; left:auto;" target="_blank"> 
-                                  </a><a href="http://localhost/dynamicprofile/profil/assets/images/40f54048d37b4e54d6f558db8d840c1e-sertifmagangdpro.pdf" style="display:inline-block;" target="_blank"><embed style="pointer-events: none; background: transparent;" src="http://localhost/dynamicprofile/profil/assets/images/40f54048d37b4e54d6f558db8d840c1e-sertifmagangdpro.pdf"></a>   
-
+                                  <div class="col-lg-2 col-md-3 cc-reference-header"> <a href="assets/images/sertifmagangdpro.pdf" target="_blank"><img
+                                        src="assets/images/dpromagang.png" height="160px" width="160px" alt="Image" /></a>
                                     <div class="h5 pt-2">PT. Dian Permata Omega</div>
-                                    <p class="category">Magang / Internship</p>
+                                    <a href="#">
+                                      <p class="category">Magang / Internship</p>
+                                    </a>
                                   </div>
                                   <div class="col-lg-10 col-md-9">
-                                    <p>
-                                        Sertifikat Internship/magang dari PT. Dian Permata Omega.                                    </p>
+                                    <p> Sertifikat Internship/magang dari PT. Dian Permata Omega.</p>
                                   </div>
-
-                                 
-
                                 </div>
-                                
                               </div>
-                              				 
-             
+                          
 
                     </div>
-                    
                 </div>
-               
             </div>
 	</div>
-
-   
-        </div></section>
+        </section>
         
         <!--
         ===================
@@ -1587,22 +1001,22 @@
                 <div class="container">
                     <div class="row section-separator">
                         <div class="each-quates col-sm-12 col-md-6">
-                            <h3 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s" style="visibility: hidden; animation-duration: 0.8s; animation-delay: 0.2s; animation-name: none;">Interested to my Work?</h3>
-                            <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s" style="visibility: hidden; animation-duration: 0.8s; animation-delay: 0.4s; animation-name: none;">Feel free to contact me thru Whatsapp</p>
-                           <a href="https://api.whatsapp.com/send?phone=6281218006463&amp;text=hello%20Dimas&amp;source=&amp;data=" class="icoWa" title="Whatsapp" target="_blank"><i class="fa fa-whatsapp fa-2x" data-wow-duration="0.8s" data-wow-delay="0.4s" style="color: green;"></i></a>
+                            <h3 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Interested to my Work?</h3>
+                            <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">Feel free to contact me thru Whatsapp</p>
+                           <a href="https://api.whatsapp.com/send?phone=6281218006463&text=hello%20Dimas&source=&data=" class="icoWa" title="Whatsapp" target="_blank" ><i class="fa fa-whatsapp fa-2x" data-wow-duration="0.8s" data-wow-delay="0.4s" style="color: green;"></i></a>
                         </div>
                         
                         
                         <div class="each-quates col-sm-12 col-md-6">
                         <a href="assets/images/whatsapp.png" target="_blank"><img src="assets/images/whatsapp.png" alt="" height="200px" width="200px" style="text-align: center;"></a><br><br>
-                        <h3 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s" style="visibility: hidden; animation-duration: 0.8s; animation-delay: 0.2s; animation-name: none;">Scan Me</h3>
+                        <h3 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Scan Me</h3>
                   
                     </div>
                 </div>
             </div>
 
             
-        </div></section>
+        </section>
         
         <!--
         ===================
@@ -1824,7 +1238,7 @@
         <footer class="mh-footer mh-footer-3">
             <div class="container-fluid">
                 <div class="row section-separator">
-                    <div class="col-sm-12 section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s" style="visibility: hidden; animation-duration: 0.8s; animation-delay: 0.2s; animation-name: none;">
+                    <div class="col-sm-12 section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
                         <h3>Contact Me</h3>
                     </div>
                     <div class="map-image image-bg col-sm-12">
@@ -1832,20 +1246,21 @@
                             <div class="row">
                                 <div class="col-sm-12 col-md-6 mh-footer-address">
                                     <div class="col-sm-12 xs-no-padding">
-                                        <div class="mh-address-footer-item dark-bg shadow-1 media wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s" style="visibility: hidden; animation-duration: 0.8s; animation-delay: 0.2s; animation-name: none;">
+                                        <div class="mh-address-footer-item dark-bg shadow-1 media wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
                                             <div class="each-icon">
                                                 <i class="fa fa-location-arrow"></i>
                                             </div>
                                             <div class="each-info media-body">
                                                 <h4>Address</h4>
                                                 <address>
-                                                JL. H. Amsar No.38 Bintaro Jakarta Selatan                                                     
+                                                    Jl. H. Amsar No.38, Bintaro, <br> 
+                                                     Jakarta Selatan
                                                 </address>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-12 xs-no-padding">
-                                        <div class="mh-address-footer-item media dark-bg shadow-1 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s" style="visibility: hidden; animation-duration: 0.8s; animation-delay: 0.4s; animation-name: none;">
+                                        <div class="mh-address-footer-item media dark-bg shadow-1 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
                                             <div class="each-icon">
                                                 <i class="fa fa-envelope-o"></i>
                                             </div>
@@ -1856,36 +1271,36 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-12 xs-no-padding">
-                                        <div class="mh-address-footer-item media dark-bg shadow-1 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s" style="visibility: hidden; animation-duration: 0.8s; animation-delay: 0.6s; animation-name: none;">
+                                        <div class="mh-address-footer-item media dark-bg shadow-1 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
                                             <div class="each-icon">
                                                 <i class="fa fa-phone"></i>
                                             </div>
                                             <div class="each-info media-body">
                                                 <h4>Phone</h4>
-                                                <a href="callto:(XXX)-XXXX-XXX">+62 812 1800 6463</a><br>
+                                                <a href="callto:(XXX)-XXXX-XXX">081218006463</a><br>
                                                 <a href="callto:(021)-7356-929">(021)-7356-929</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-12 col-md-6 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s" style="visibility: hidden; animation-duration: 0.8s; animation-delay: 0.2s; animation-name: none;">
-                                    <form action="mailto:dimasfathulyaqin@gmail.com?subject=perihal : profile website" method="post" enctype="text/plain">
+                                <div class="col-sm-12 col-md-6 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                                    <form action="mailto:dimasfathulyaqin@gmail.com?subject=perihal : profile website" method="post" enctype="text/plain" >
 
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                <input name="firstname" class="contact-name form-control" id="name" type="text" placeholder="First Name" required="">
+                                                <input name="firstname" class="contact-name form-control" id="name" type="text" placeholder="First Name" required>
                                             </div>
                 
                                             <div class="col-sm-12">
-                                                <input name="lastname" class="contact-email form-control" id="L_name" type="text" placeholder="Last Name" required="">
+                                                <input name="lastname" class="contact-email form-control" id="L_name" type="text" placeholder="Last Name" required>
                                             </div>
                 
                                             <div class="col-sm-12">
-                                                <input name="email" class="contact-subject form-control" id="email" type="email" placeholder="Your Email" required="">
+                                                <input name="email" class="contact-subject form-control" id="email" type="email" placeholder="Your Email" required>
                                             </div>
                 
                                             <div class="col-sm-12">
-                                                <textarea name="message" class="contact-message" id="message" rows="6" placeholder="Your Message" required=""></textarea>
+                                                <textarea name="message" class="contact-message" id="message" rows="6" placeholder="Your Message" required></textarea>
                                             </div>
                                             
                                             <!-- Subject Button -->
@@ -1895,7 +1310,7 @@
                                         </div>
                                     </form>
                                 </div>
-                                <div class="col-sm-12 mh-copyright wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s" style="visibility: hidden; animation-duration: 0.8s; animation-delay: 0.2s; animation-name: none;">
+                                <div class="col-sm-12 mh-copyright wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="text-left text-xs-center">
@@ -1905,7 +1320,7 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <ul class="social-icon">
-                                                <li><a href="https://id.linkedin.com/in/dimas-fathulyaqin-0859981b0?challengeId=AQFMPCJmf1fBtwAAAXYpiGQAPulkDnZsUZCpFsI2xpwL6IRdHmwhPiz7RJ1_7MxyePfAlYyVViXIducEyizRwtgbbf-9TTK35A&amp;submissionId=07fc645c-3d43-4d16-3904-992436cfc55c" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                                <li><a href="https://id.linkedin.com/in/dimas-fathulyaqin-0859981b0?challengeId=AQFMPCJmf1fBtwAAAXYpiGQAPulkDnZsUZCpFsI2xpwL6IRdHmwhPiz7RJ1_7MxyePfAlYyVViXIducEyizRwtgbbf-9TTK35A&submissionId=07fc645c-3d43-4d16-3904-992436cfc55c" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                                                 <li><a href="https://twitter.com/dimasfath94" target="_blank"><i class="fa fa-twitter"></i></a></li>
                                                 <li><a href="https://github.com/dimasfath94" target="_blank"><i class="fa fa-github"></i></a></li>
                                                 <li><a href="https://www.instagram.com/dimasfath94/" target="_blank"><i class="fa fa-instagram"></i></a></li>
@@ -1959,7 +1374,6 @@
 
 
 
+</body>
 
-
-
-</body></html>
+</html>
