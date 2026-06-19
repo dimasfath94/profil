@@ -20,7 +20,20 @@
   <link rel="stylesheet" href="assets/sweetalert2/dist/sweetalert2.min.css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   
-  <script src= "https://smtpjs.com/v3/smtp.js"> </script> 
+  <!-- <script src= "https://smtpjs.com/v3/smtp.js"> </script>  -->
+  <script>
+    const Email = {
+      send: function (config) {
+        return fetch("/sendmail.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(config)
+        })
+        .then(res => res.json())
+      }
+    }
+    </script>
+    
 	<style>
 	body {
 		background: #dcdde0;
@@ -257,7 +270,13 @@ var convo = {
         question: "beritahu Dimas",
         answer: "beritahu"
       }
-    ]
+    ],
+    onShow: () => {
+    updateClockAndGreet(false);
+    // optional: realtime update tiap detik selama node ini aktif
+    if (window._waktuInterval) clearInterval(window._waktuInterval);
+    window._waktuInterval = setInterval(() => updateClockAndGreet(false), 1000);
+  }
   },
 
   "prosesemail": { 
@@ -415,23 +434,49 @@ var convo = {
 }
 
 //function kirim pesan
-sendEmail = function() { 
-      Email.send({ 
-        //SecureToken : "c2127c4d-aaca-4af1-bdb3-5ea42a33bf34",
-	SecureToken : "f85f2711-ac69-4e1c-a267-9ff3b3df5de7",
-        Host: "smtp.elasticemail.com", 
-        Username: "botdimv2@gmail.com", 
-        Password: "99980A1232F2215604602E21D041855ED950", 
-        To: 'dimasfathulyaqin@gmail.com', 
-        From: "botdimv2@gmail.com", 
-        Subject: "Email From Botdim", 
-        Body: "Tuan Dimas Yang terhormat, ada yang mengunjungi website anda dan ada yang berinteraksi dengan saya tanpa mengirimkan pesan. Tetapi menitip salam kepada anda.", 
-      }) 
-        .then(function (message) { 
-          alert("email berhasil terkirim.")
-          chatWindow.talk(convo, "prosesemail")  
-        }); 
-    } 
+// sendEmail = function() { 
+//       Email.send({ 
+//         //SecureToken : "c2127c4d-aaca-4af1-bdb3-5ea42a33bf34",
+// 	SecureToken : "f85f2711-ac69-4e1c-a267-9ff3b3df5de7",
+//         Host: "smtp.elasticemail.com", 
+//         Username: "botdimv2@gmail.com", 
+//         Password: "99980A1232F2215604602E21D041855ED950", 
+//         To: 'dimasfathulyaqin@gmail.com', 
+//         From: "botdimv2@gmail.com", 
+//         Subject: "Email From Botdim", 
+//         Body: "Tuan Dimas Yang terhormat, ada yang mengunjungi website anda dan ada yang berinteraksi dengan saya tanpa mengirimkan pesan. Tetapi menitip salam kepada anda.", 
+//       }) 
+//         .then(function (message) { 
+//           alert("email berhasil terkirim.")
+//           chatWindow.talk(convo, "prosesemail")  
+//         }); 
+//     } 
+
+    function sendEmail() {
+  const data = new FormData();
+  data.append("to", "dimasfathulyaqin@gmail.com");
+  data.append("subject", "Email From Botdim");
+  data.append(
+    "body",
+    "Tuan Dimas Yang terhormat, ada yang mengunjungi website anda dan ada yang berinteraksi dengan saya tanpa mengirimkan pesan. Tetapi menitip salam kepada anda."
+  );
+
+  fetch("send_email.php", {
+    method: "POST",
+    body: data
+  })
+  .then(res => res.json())
+  .then(res => {
+    if (res.status === "success") {
+      alert("Email berhasil terkirim");
+      chatWindow.talk(convo, "prosesemail");  
+    } else {
+      alert("Email gagal");
+      console.log(res);
+    }
+  });
+}
+
 
     //function kirim pesan english
     sendEmaileng = function() { 
@@ -454,132 +499,74 @@ sendEmail = function() {
 
 
 //waktu
-getDateTime  = function() {
-    var now     = new Date(); 
-    var year    = now.getFullYear();
-    var month   = now.getMonth()+1; 
-    var day     = now.getDate();
-    var hour    = now.getHours();
-    var h = hour % 12;
-    var minute  = now.getMinutes();
-    var second  = now.getSeconds(); 
+// =================== DATE ===================
+function formatNumber(n) {
+    return n < 10 ? '0' + n : n;
+  }
 
-    if(month.toString().length == 1) {
-         month = '0'+month;
-    }
-    if(day.toString().length == 1) {
-         day = '0'+day;
-    }   
-    if(hour.toString().length == 1) {
-         hour = '0'+hour;
-    }
-    if(minute.toString().length == 1) {
-         minute = '0'+minute;
-    }
-    if(second.toString().length == 1) {
-         second = '0'+second;
-    }   
+  function getDateTime(isEng = false) {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = formatNumber(now.getMonth() + 1);
+    const day = formatNumber(now.getDate());
+    const hour = formatNumber(now.getHours());
+    const minute = formatNumber(now.getMinutes());
 
-    
-    var dateTime = year+'/'+month+'/'+day+' '+ '<br>' + 'Jam = '+hour+':'+minute;   
-     return dateTime;
+    if (isEng) {
+      return `${year}/${month}/${day} <br>Time is Now = ${hour}:${minute}`;
+    } else {
+      return `${year}/${month}/${day} <br>Jam = ${hour}:${minute}`;
+    }
+  }
+
+  function updateClockAndGreet(isEng = false) {
+  const clockId = isEng ? "digital-clock-eng" : "digital-clock";
+  const greetId = isEng ? "greet-time-eng" : "greet-time";
+
+  // update clock
+  document.getElementById(clockId).innerHTML = getDateTime(isEng);
+
+  // update greet
+  const hrs = new Date().getHours();
+  let greet;
+  if (isEng) {
+    if (hrs < 12) greet = 'Morning';
+    else if (hrs < 17) greet = 'Afternoon';
+    else greet = 'Evening';
+  } else {
+    if (hrs < 12) greet = 'Pagi';
+    else if (hrs < 17) greet = 'Sore';
+    else greet = 'Malam';
+  }
+  document.getElementById(greetId).innerHTML = greet + ' ^_^';
 }
 
-greetTime  = function() {
-  var myDate = new Date();
-    var hrs = myDate.getHours();
 
-    var greet;
-
-    if (hrs < 12)
-        greet = 'Pagi';
-    else if (hrs >= 12 && hrs <= 17)
-        greet = 'Sore';
-    else if (hrs >= 17 && hrs <= 24)
-        greet = 'Malam';
-
-        
-        document.getElementById('greet-time').innerHTML = greet + ' ^_^';
-
-}
-
-    // example usage: realtime clock
-    setInterval(function(){
-        currentTime = getDateTime();
-        document.getElementById("digital-clock").innerHTML = currentTime;
-    }, 1000);
-
-      // Greet By time
-      setInterval(function(){
-        greet_time = greetTime();
-        document.getElementById("greet-time").innerHTML = + greet_time(greet);
-    }, 1000);
-    //end waktu
-
-
-
-    //time
-getDateTimeEng  = function() {
-    var noweng     = new Date(); 
-    var yeareng   = noweng.getFullYear();
-    var montheng   = noweng.getMonth()+1; 
-    var dayeng     = noweng.getDate();
-    var houreng    = noweng.getHours();
-    var h = houreng % 12;
-    var minuteeng  = noweng.getMinutes();
-    var secondeng  = now.getSeconds(); 
-
-    if(montheng.toString().length == 1) {
-         montheng = '0'+montheng;
+  function greetTime(isEng = false) {
+    const hrs = new Date().getHours();
+    let greet;
+    if (isEng) {
+      if (hrs < 12) greet = 'Morning';
+      else if (hrs < 17) greet = 'Afternoon';
+      else greet = 'Evening';
+      document.getElementById('greet-time-eng').innerHTML = greet + ' ^_^';
+    } else {
+      if (hrs < 12) greet = 'Pagi';
+      else if (hrs < 17) greet = 'Sore';
+      else greet = 'Malam';
+      document.getElementById('greet-time').innerHTML = greet + ' ^_^';
     }
-    if(dayeng.toString().length == 1) {
-         dayeng = '0'+dayeng;
-    }   
-    if(houreng.toString().length == 1) {
-         houreng = '0'+houreng;
-    }
-    if(minuteeng.toString().length == 1) {
-         minuteeng = '0'+minuteeng;
-    }
-    if(secondeng.toString().length == 1) {
-         secondeng = '0'+secondeng;
-    }   
+  }
 
-    
-    var dateTimeeng = yeareng+'/'+montheng+'/'+dayeng+' '+ '<br>' + 'Time is Now = '+houreng+':'+minuteeng;   
-     return dateTimeeng;
-}
+  setInterval(() => {
+    document.getElementById("digital-clock").innerHTML = getDateTime();
+    greetTime();
+  }, 1000);
 
-greetTimeeng  = function() {
-  var myDateeng = new Date();
-    var hrseng = myDateeng.getHours();
-
-    var greeteng;
-
-    if (hrseng < 12)
-        greeteng = 'Morning';
-    else if (hrseng >= 12 && hrseng <= 17)
-        greeteng = 'Afternoon';
-    else if (hrseng >= 17 && hrseng <= 24)
-        greeteng = 'Evening';
-
-        
-        document.getElementById('greet-time-eng').innerHTML = greeteng + ' ^_^';
-
-}
-
-    // example usage: realtime clock
-    setInterval(function(){
-        currentTimeeng = getDateTime();
-        document.getElementById("digital-clock-eng").innerHTML = currentTimeeng;
-    }, 1000);
-
-      // Greet By time
-      setInterval(function(){
-        greet_time_eng = greetTimeeng();
-        document.getElementById("greet-time-eng").innerHTML = + greet_time_eng(greeteng);
-    }, 1000);
-    //end time
+  // setInterval(() => {
+  //   document.getElementById("digital-clock-eng").innerHTML = getDateTime(true);
+  //   greetTime(true);
+  // }, 1000);
 
 
  
@@ -602,28 +589,52 @@ greetTimeeng  = function() {
         }
         else if (message)
         {
-                Email.send({
-                    Host : "smtp.elasticemail.com",
-                    Username : "botdimv2@gmail.com",
-                    Password : "99980A1232F2215604602E21D041855ED950",
-                    To : 'dimasfathulyaqin@gmail.com',
-                    From : "botdimv2@gmail.com",
-                    Subject : "Email From Botdim",
-                    Body : $('#message').val()
-                }).then(
-                  message => alert("email berhasil terkirim."),
-                  chatWindow.talk(convo, "prosesemail") 
+                // Email.send({
+                //     Host : "smtp.elasticemail.com",
+                //     Username : "botdimv2@gmail.com",
+                //     Password : "99980A1232F2215604602E21D041855ED950",
+                //     To : 'dimasfathulyaqin@gmail.com',
+                //     From : "botdimv2@gmail.com",
+                //     Subject : "Email From Botdim",
+                //     Body : $('#message').val()
+                // }).then(
+                //   message => alert("email berhasil terkirim."),
+                //   chatWindow.talk(convo, "prosesemail") 
+                // );
+
+
+                const data = new FormData();
+                data.append("to", "dimasfathulyaqin@gmail.com");
+                data.append("subject", "Email From Botdim");
+                data.append(
+                  "body",
+                  $('#message').val()
                 );
 
-        }
-    return { message : message }
-  }    
-      }).then((result) => { 
-        Swal.fire(
-          'Berhasil!',
-          'Pesan Berhasil di Proses',
-          'success')
-      }) 
+                fetch("send_email.php", {
+                  method: "POST",
+                  body: data
+                })
+                .then(res => res.json())
+                .then(res => {
+                  if (res.status === "success") {
+                    alert("Email berhasil terkirim");
+                    chatWindow.talk(convo, "prosesemail");  
+                  } else {
+                    alert("Email gagal");
+                    console.log(res);
+                  }
+                });
+
+                      }
+                  return { message : message }
+                }    
+                    }).then((result) => { 
+                      Swal.fire(
+                        'Berhasil!',
+                        'Pesan Berhasil di Proses',
+                        'success')
+                    }) 
     }
     //end kirim pesan manual
 
@@ -682,6 +693,6 @@ chatWindow.talk(convo)
 <script src="assets/js/jquery.min.js"></script>
 
 <script src= 
-"https://smtpjs.com/v3/smtp.js"> 
+"https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"> 
 </script> 
 </body>

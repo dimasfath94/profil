@@ -265,10 +265,10 @@ a {
 .mini-separator {
   padding: 20px 0; }
   
-  section {
+  /* section {
     //padding: 60px 0;
     //padding-bottom: 30px;
-}
+} */
 
 /**
  * ---------------------
@@ -2698,3 +2698,40 @@ BLOG Pagination
 /*# sourceMappingURL=styles.css.map */
 
 
+
+/* Wrapper untuk menumpuk lingkaran dan teks */
+/* Wrapper sebagai wadah relatif agar teks bisa di tengah */
+.mh-progress-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 15px auto;
+}
+
+/* Lingkaran (Hanya background saja yang di-masking) */
+.mh-progress-circle-custom {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(#00ccff var(--progress), #eee 0deg);
+  
+  /* Lubangi tengahnya agar transparan */
+  -webkit-mask: radial-gradient(farthest-side, transparent 75%, #000 76%);
+  mask: radial-gradient(farthest-side, transparent 75%, #000 76%);
+}
+
+/* Teks (Diletakkan di atas lingkaran, tidak terkena mask) */
+.score-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 18px;
+  color: #333; /* Ganti ke #fff jika background web Anda gelap */
+  z-index: 1;
+}
